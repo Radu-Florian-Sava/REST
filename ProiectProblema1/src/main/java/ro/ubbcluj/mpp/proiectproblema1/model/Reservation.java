@@ -4,7 +4,7 @@ import javafx.util.Pair;
 
 import java.util.List;
 
-public class Reservation implements Identifiable<Pair<Integer,Integer>>{
+public class Reservation implements Identifiable<Pair<Integer, Integer>> {
     private int flightID;
     private int clientID;
     private List<String> touristNames;
@@ -42,22 +42,12 @@ public class Reservation implements Identifiable<Pair<Integer,Integer>>{
 
     @Override
     public Pair<Integer, Integer> getID() {
-        return new Pair<>(flightID,clientID);
+        return new Pair<>(flightID, clientID);
     }
 
     @Override
     public void setID(Pair<Integer, Integer> id) {
-            this.flightID = id.getKey();
-            this.clientID = id.getValue();
-    }
-
-    @Override
-    public String toString() {
-        return "Reservation{" +
-                "flightID=" + flightID +
-                ", clientID=" + clientID +
-                ", touristNames=" + touristNames +
-                ", numberOfSeats=" + numberOfSeats +
-                '}';
+        this.flightID = id.getKey();
+        this.clientID = id.getValue();
     }
 }

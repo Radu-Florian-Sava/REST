@@ -1,6 +1,7 @@
 package ro.ubbcluj.mpp.proiectproblema1.model;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Flight implements Identifiable<Integer> {
 
@@ -73,7 +74,7 @@ public class Flight implements Identifiable<Integer> {
         return "Flight{" +
                 "ID=" + ID +
                 ", destination='" + destination + '\'' +
-                ", dateTime=" + dateTime +
+                ", dateTime=" + dateTime.format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm"))   +
                 ", airport='" + airport + '\'' +
                 ", numberOfTickets=" + numberOfTickets +
                 '}';
