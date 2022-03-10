@@ -1,8 +1,10 @@
 package ro.ubbcluj.mpp.proiectproblema1.repository;
 
+import ro.ubbcluj.mpp.proiectproblema1.model.Identifiable;
+
 import java.util.Collection;
 
-public interface Repository<T, Tid> {
+public interface Repository<T extends Identifiable<Tid>, Tid> {
     void add(T elem);
     void delete(T elem);
     void update(T elem, Tid id);
