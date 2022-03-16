@@ -10,6 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -28,11 +29,12 @@ public class FlightRepo implements AbstractFlightRepo{
     public void add(Flight elem) {
         logger.traceEntry("saving flight {}", elem);
         Connection con = dbUtils.getConnection();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss");
         try(PreparedStatement preStm=con.prepareStatement("insert into Flights(destination, dateTime, airport, " +
                 "numberOfTickets) values (?,?,?,?)" ) ){
 
             preStm.setString(1,elem.getDestination());
-            preStm.setString(2,elem.getDateTime().toString());
+            preStm.setString(2, elem.getDateTime().format(formatter));
             preStm.setString(3,elem.getAirport());
             preStm.setInt(4, elem.getNumberOfTickets());
             int result = preStm.executeUpdate();
@@ -66,11 +68,12 @@ public class FlightRepo implements AbstractFlightRepo{
     public void update(Flight elem, Integer id) {
         logger.traceEntry();
         Connection con = dbUtils.getConnection();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss");
         try {
             PreparedStatement statement = con.prepareStatement
                     ("UPDATE Flights SET destination=?, dateTime=?, airport=?, numberOfTickets=? WHERE id=?");
             statement.setString(1,elem.getDestination());
-            statement.setString(2,elem.getDateTime().toString());
+            statement.setString(2,elem.getDateTime().format(formatter));
             statement.setString(3,elem.getAirport());
             statement.setInt(4, elem.getNumberOfTickets());
             statement.setInt(5, id);
