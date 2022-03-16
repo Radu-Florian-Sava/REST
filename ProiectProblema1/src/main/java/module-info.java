@@ -6,6 +6,8 @@ module ro.ubbcluj.mpp.proiectproblema1 {
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
     requires javafx.graphics;
+    requires org.apache.logging.log4j;
+    requires java.sql;
 
     opens ro.ubbcluj.mpp.proiectproblema1 to javafx.fxml;
     exports ro.ubbcluj.mpp.proiectproblema1;

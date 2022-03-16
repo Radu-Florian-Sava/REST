@@ -7,13 +7,14 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertInstanceOf;
 
 class ReservationTest {
 
     Reservation reservation;
     @BeforeEach
     void setReservation(){
-        reservation = new Reservation(12,74, List.of("Alex", "Elena", "Florin"), 3);
+        reservation = new Reservation(new Flight(),new Client(), List.of("Alex", "Elena", "Florin"), 3);
     }
     @Test
     void getTouristNames() {
@@ -39,15 +40,15 @@ class ReservationTest {
 
     @Test
     void getID() {
-        assertEquals(reservation.getID().getKey(), 12);
-        assertEquals(reservation.getID().getValue(), 74);
+        assertInstanceOf(Flight.class, reservation.getID().getKey());
+        assertInstanceOf(Client.class, reservation.getID().getValue());
     }
 
 
     @Test
     void setID() {
-        reservation.setID(new Pair(128,36));
-        assertEquals(reservation.getID().getKey(), 128);
-        assertEquals(reservation.getID().getValue(), 36);
+        reservation.setID(new Pair(new Flight(),new Client()));
+        assertInstanceOf(Flight.class, reservation.getID().getKey());
+        assertInstanceOf(Client.class, reservation.getID().getValue());
     }
 }

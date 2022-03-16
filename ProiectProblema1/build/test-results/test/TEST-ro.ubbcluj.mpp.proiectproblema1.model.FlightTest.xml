@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ro.ubbcluj.mpp.proiectproblema1.model.FlightTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2022-03-10T11:30:31" hostname="DESKTOP-HU6EM17" time="0.101">
+<testsuite name="ro.ubbcluj.mpp.proiectproblema1.model.FlightTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2022-03-16T13:05:04" hostname="DESKTOP-HU6EM17" time="0.023">
   <properties/>
-  <testcase name="getDestination()" classname="ro.ubbcluj.mpp.proiectproblema1.model.FlightTest" time="0.017"/>
-  <testcase name="testToString()" classname="ro.ubbcluj.mpp.proiectproblema1.model.FlightTest" time="0.04"/>
-  <testcase name="setDateTime()" classname="ro.ubbcluj.mpp.proiectproblema1.model.FlightTest" time="0.002"/>
-  <testcase name="getDateTime()" classname="ro.ubbcluj.mpp.proiectproblema1.model.FlightTest" time="0.001"/>
-  <testcase name="getNumberOfTickets()" classname="ro.ubbcluj.mpp.proiectproblema1.model.FlightTest" time="0.002"/>
-  <testcase name="getAirport()" classname="ro.ubbcluj.mpp.proiectproblema1.model.FlightTest" time="0.002"/>
-  <testcase name="getID()" classname="ro.ubbcluj.mpp.proiectproblema1.model.FlightTest" time="0.005"/>
-  <testcase name="setID()" classname="ro.ubbcluj.mpp.proiectproblema1.model.FlightTest" time="0.001"/>
-  <testcase name="setDestination()" classname="ro.ubbcluj.mpp.proiectproblema1.model.FlightTest" time="0.002"/>
-  <testcase name="setNumberOfTickets()" classname="ro.ubbcluj.mpp.proiectproblema1.model.FlightTest" time="0.003"/>
-  <testcase name="setAirport()" classname="ro.ubbcluj.mpp.proiectproblema1.model.FlightTest" time="0.001"/>
+  <testcase name="getDestination()" classname="ro.ubbcluj.mpp.proiectproblema1.model.FlightTest" time="0.003"/>
+  <testcase name="testToString()" classname="ro.ubbcluj.mpp.proiectproblema1.model.FlightTest" time="0.013"/>
+  <testcase name="setDateTime()" classname="ro.ubbcluj.mpp.proiectproblema1.model.FlightTest" time="0.0"/>
+  <testcase name="getDateTime()" classname="ro.ubbcluj.mpp.proiectproblema1.model.FlightTest" time="0.0"/>
+  <testcase name="getNumberOfTickets()" classname="ro.ubbcluj.mpp.proiectproblema1.model.FlightTest" time="0.001"/>
+  <testcase name="getAirport()" classname="ro.ubbcluj.mpp.proiectproblema1.model.FlightTest" time="0.0"/>
+  <testcase name="getID()" classname="ro.ubbcluj.mpp.proiectproblema1.model.FlightTest" time="0.0"/>
+  <testcase name="setID()" classname="ro.ubbcluj.mpp.proiectproblema1.model.FlightTest" time="0.0"/>
+  <testcase name="setDestination()" classname="ro.ubbcluj.mpp.proiectproblema1.model.FlightTest" time="0.0"/>
+  <testcase name="setNumberOfTickets()" classname="ro.ubbcluj.mpp.proiectproblema1.model.FlightTest" time="0.0"/>
+  <testcase name="setAirport()" classname="ro.ubbcluj.mpp.proiectproblema1.model.FlightTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -4,22 +4,22 @@ import javafx.util.Pair;
 
 import java.util.List;
 
-public class Reservation implements Identifiable<Pair<Integer, Integer>> {
-    private int flightID;
-    private int clientID;
+public class Reservation implements Identifiable<Pair<Flight, Client>> {
+    private Flight flight;
+    private Client client;
     private List<String> touristNames;
     private int numberOfSeats;
 
     public Reservation() {
-        this.flightID = 0;
-        this.clientID = 0;
+        this.flight = null;
+        this.client = null;
         this.touristNames = null;
         this.numberOfSeats = 0;
     }
 
-    public Reservation(int flightID, int clientID, List<String> touristNames, int numberOfSeats) {
-        this.flightID = flightID;
-        this.clientID = clientID;
+    public Reservation(Flight flight, Client client, List<String> touristNames, int numberOfSeats) {
+        this.flight = flight;
+        this.client = client;
         this.touristNames = touristNames;
         this.numberOfSeats = numberOfSeats;
     }
@@ -41,13 +41,13 @@ public class Reservation implements Identifiable<Pair<Integer, Integer>> {
     }
 
     @Override
-    public Pair<Integer, Integer> getID() {
-        return new Pair<>(flightID, clientID);
+    public Pair<Flight, Client> getID() {
+        return new Pair<>(flight, client);
     }
 
     @Override
-    public void setID(Pair<Integer, Integer> id) {
-        this.flightID = id.getKey();
-        this.clientID = id.getValue();
+    public void setID(Pair<Flight, Client> id) {
+        this.flight = id.getKey();
+        this.client = id.getValue();
     }
 }
