@@ -25,7 +25,7 @@
         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     </rowConstraints>
     <children>
-        <TableView fx:id="flightTable" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+        <TableView fx:id="flightTable" onMouseClicked="#addToSearchedFlights" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
             <columns>
                 <TableColumn fx:id="destinationColumn" prefWidth="75.0" text="Destinatie" />
                 <TableColumn fx:id="departureDateColumn" prefWidth="75.0" text="Data plecarii" />

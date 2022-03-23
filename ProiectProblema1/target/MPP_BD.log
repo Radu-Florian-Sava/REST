@@ -1632,3 +1632,283 @@
 23 Mar 2022 23:24:41,652 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
 23 Mar 2022 23:24:41,652 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@774d807c)
 23 Mar 2022 23:24:41,653 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 138 getAll - Exit with([Flight{ID=10, destination='San Francisco', dateTime=15-03-2022 19:36, airport='Kloog2', numberOfTickets=4}, Flight{ID=15, destination='Sibiu', dateTime=16-03-2022 23:36, airport='Africa', numberOfTickets=2}])
+23 Mar 2022 23:36:47,301 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 23 <init> - Initializing FlightRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:36:47,305 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IClientRepo 21 <init> - Initializing ClientRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:36:47,307 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IAdminRepo 22 <init> - Initializing AdminRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:36:47,308 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IReservationRepo 26 <init> - Initializing FlightRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:36:52,959 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 18 findByUsername - Enter looking for admin with username redragon
+23 Mar 2022 23:36:52,959 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:36:52,959 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 25 getNewConnection - Enter
+23 Mar 2022 23:36:52,960 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:E:\Databases\airport.db
+23 Mar 2022 23:36:52,960 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 31 getNewConnection - user: null
+23 Mar 2022 23:36:52,960 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 32 getNewConnection - pass: null
+23 Mar 2022 23:36:53,183 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@78d22747)
+23 Mar 2022 23:36:53,186 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 29 findByUsername - Found org.sqlite.jdbc4.JDBC4ResultSet@1b99ec62 instances
+23 Mar 2022 23:36:53,186 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 35 findByUsername - Exit
+23 Mar 2022 23:36:53,269 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 117 getAll - Enter
+23 Mar 2022 23:36:53,269 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:36:53,270 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 25 getNewConnection - Enter
+23 Mar 2022 23:36:53,270 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:E:\Databases\airport.db
+23 Mar 2022 23:36:53,270 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 31 getNewConnection - user: null
+23 Mar 2022 23:36:53,270 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 32 getNewConnection - pass: null
+23 Mar 2022 23:36:53,271 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4bbb40c2)
+23 Mar 2022 23:36:53,291 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 138 getAll - Exit with([Flight{ID=10, destination='San Francisco', dateTime=15-03-2022 19:36, airport='Kloog2', numberOfTickets=4}, Flight{ID=15, destination='Sibiu', dateTime=16-03-2022 23:36, airport='Africa', numberOfTickets=2}])
+23 Mar 2022 23:37:05,120 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 117 getAll - Enter
+23 Mar 2022 23:37:05,120 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:37:05,121 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4bbb40c2)
+23 Mar 2022 23:37:05,121 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 138 getAll - Exit with([Flight{ID=10, destination='San Francisco', dateTime=15-03-2022 19:36, airport='Kloog2', numberOfTickets=4}, Flight{ID=15, destination='Sibiu', dateTime=16-03-2022 23:36, airport='Africa', numberOfTickets=2}])
+23 Mar 2022 23:37:05,931 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IClientRepo 101 getAll - Enter
+23 Mar 2022 23:37:05,931 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:37:05,931 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 25 getNewConnection - Enter
+23 Mar 2022 23:37:05,932 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:E:\Databases\airport.db
+23 Mar 2022 23:37:05,932 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 31 getNewConnection - user: null
+23 Mar 2022 23:37:05,932 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 32 getNewConnection - pass: null
+23 Mar 2022 23:37:05,932 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@36101f9b)
+23 Mar 2022 23:37:05,936 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IClientRepo 119 getAll - Exit with([Client{ID=1, name='Marconi', address='Strada stramba'}, Client{ID=5, name='Valjean', address='Strada scurta'}, Client{ID=7, name='Miron', address='Strada pacii'}])
+23 Mar 2022 23:37:09,999 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.ClientRepo 18 findByName - Enter looking for client with name Miron
+23 Mar 2022 23:37:09,999 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:37:10,000 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@36101f9b)
+23 Mar 2022 23:37:10,001 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.ClientRepo 29 findByName - Found org.sqlite.jdbc4.JDBC4ResultSet@1e309856 instances
+23 Mar 2022 23:37:10,001 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.ClientRepo 34 findByName - Exit
+23 Mar 2022 23:37:28,912 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.ClientRepo 18 findByName - Enter looking for client with name Miron
+23 Mar 2022 23:37:28,913 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:37:28,913 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@36101f9b)
+23 Mar 2022 23:37:28,913 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.ClientRepo 29 findByName - Found org.sqlite.jdbc4.JDBC4ResultSet@2fb86cec instances
+23 Mar 2022 23:37:28,914 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.ClientRepo 34 findByName - Exit
+23 Mar 2022 23:37:28,914 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IReservationRepo 34 add - Enter saving reservation ro.ubbcluj.mpp.proiectproblema1.model.Reservation@344db7b9
+23 Mar 2022 23:37:28,915 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:37:28,915 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 25 getNewConnection - Enter
+23 Mar 2022 23:37:28,915 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:E:\Databases\airport.db
+23 Mar 2022 23:37:28,916 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 31 getNewConnection - user: null
+23 Mar 2022 23:37:28,916 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 32 getNewConnection - pass: null
+23 Mar 2022 23:37:28,917 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@13a7c920)
+23 Mar 2022 23:37:28,926 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IReservationRepo 49 add - Saved 1 instances
+23 Mar 2022 23:37:28,927 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:37:28,927 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@13a7c920)
+23 Mar 2022 23:37:28,931 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IReservationRepo 59 add - Saved 1 instances
+23 Mar 2022 23:37:28,935 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IReservationRepo 59 add - Saved 1 instances
+23 Mar 2022 23:37:28,936 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 68 update - Enter
+23 Mar 2022 23:37:28,936 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:37:28,936 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4bbb40c2)
+23 Mar 2022 23:37:28,936 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 91 findById - Enter looking for flight with id 15
+23 Mar 2022 23:37:28,936 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:37:28,936 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4bbb40c2)
+23 Mar 2022 23:37:28,937 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 105 findById - Found org.sqlite.jdbc4.JDBC4ResultSet@6d405a28 instances
+23 Mar 2022 23:37:28,937 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 111 findById - Exit
+23 Mar 2022 23:37:28,941 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 81 update - Updated 1 instances
+23 Mar 2022 23:37:28,941 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 86 update - Exit
+23 Mar 2022 23:37:28,941 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IReservationRepo 69 add - Exit
+23 Mar 2022 23:37:41,032 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.ClientRepo 18 findByName - Enter looking for client with name Miron
+23 Mar 2022 23:37:41,032 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:37:41,032 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@36101f9b)
+23 Mar 2022 23:37:41,033 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.ClientRepo 29 findByName - Found org.sqlite.jdbc4.JDBC4ResultSet@71ea5cc7 instances
+23 Mar 2022 23:37:41,033 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.ClientRepo 34 findByName - Exit
+23 Mar 2022 23:37:41,033 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IReservationRepo 34 add - Enter saving reservation ro.ubbcluj.mpp.proiectproblema1.model.Reservation@49c2651
+23 Mar 2022 23:37:41,033 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IReservationRepo 36 add - Exit
+23 Mar 2022 23:38:08,083 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 23 <init> - Initializing FlightRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:38:08,088 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IClientRepo 21 <init> - Initializing ClientRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:38:08,089 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IAdminRepo 22 <init> - Initializing AdminRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:38:08,092 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IReservationRepo 26 <init> - Initializing FlightRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:38:13,641 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 18 findByUsername - Enter looking for admin with username redragon
+23 Mar 2022 23:38:13,642 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:38:13,642 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 25 getNewConnection - Enter
+23 Mar 2022 23:38:13,642 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:E:\Databases\airport.db
+23 Mar 2022 23:38:13,643 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 31 getNewConnection - user: null
+23 Mar 2022 23:38:13,643 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 32 getNewConnection - pass: null
+23 Mar 2022 23:38:13,778 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@11c99b24)
+23 Mar 2022 23:38:13,781 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 29 findByUsername - Found org.sqlite.jdbc4.JDBC4ResultSet@42c43a13 instances
+23 Mar 2022 23:38:13,781 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 35 findByUsername - Exit
+23 Mar 2022 23:38:13,850 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 117 getAll - Enter
+23 Mar 2022 23:38:13,851 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:38:13,851 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 25 getNewConnection - Enter
+23 Mar 2022 23:38:13,851 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:E:\Databases\airport.db
+23 Mar 2022 23:38:13,851 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 31 getNewConnection - user: null
+23 Mar 2022 23:38:13,851 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 32 getNewConnection - pass: null
+23 Mar 2022 23:38:13,852 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@774d807c)
+23 Mar 2022 23:38:13,865 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 138 getAll - Exit with([Flight{ID=10, destination='San Francisco', dateTime=15-03-2022 19:36, airport='Kloog2', numberOfTickets=4}, Flight{ID=15, destination='Sibiu', dateTime=16-03-2022 23:36, airport='Africa', numberOfTickets=0}])
+23 Mar 2022 23:40:31,048 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 23 <init> - Initializing FlightRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:40:31,054 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IClientRepo 21 <init> - Initializing ClientRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:40:31,055 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IAdminRepo 22 <init> - Initializing AdminRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:40:31,057 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IReservationRepo 26 <init> - Initializing FlightRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:40:36,025 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 18 findByUsername - Enter looking for admin with username redragon
+23 Mar 2022 23:40:36,025 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:40:36,025 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 25 getNewConnection - Enter
+23 Mar 2022 23:40:36,025 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:E:\Databases\airport.db
+23 Mar 2022 23:40:36,026 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 31 getNewConnection - user: null
+23 Mar 2022 23:40:36,026 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 32 getNewConnection - pass: null
+23 Mar 2022 23:40:36,201 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@11c99b24)
+23 Mar 2022 23:40:36,203 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 29 findByUsername - Found org.sqlite.jdbc4.JDBC4ResultSet@42c43a13 instances
+23 Mar 2022 23:40:36,204 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 35 findByUsername - Exit
+23 Mar 2022 23:40:36,288 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 117 getAll - Enter
+23 Mar 2022 23:40:36,288 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:40:36,288 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 25 getNewConnection - Enter
+23 Mar 2022 23:40:36,288 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:E:\Databases\airport.db
+23 Mar 2022 23:40:36,288 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 31 getNewConnection - user: null
+23 Mar 2022 23:40:36,288 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 32 getNewConnection - pass: null
+23 Mar 2022 23:40:36,289 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@774d807c)
+23 Mar 2022 23:40:36,307 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 138 getAll - Exit with([Flight{ID=10, destination='San Francisco', dateTime=15-03-2022 19:36, airport='Kloog2', numberOfTickets=4}, Flight{ID=15, destination='Sibiu', dateTime=16-03-2022 23:36, airport='Africa', numberOfTickets=0}])
+23 Mar 2022 23:41:00,724 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 23 <init> - Initializing FlightRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:41:00,729 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IClientRepo 21 <init> - Initializing ClientRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:41:00,730 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IAdminRepo 22 <init> - Initializing AdminRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:41:00,733 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IReservationRepo 26 <init> - Initializing FlightRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:41:05,261 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 18 findByUsername - Enter looking for admin with username redragon
+23 Mar 2022 23:41:05,261 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:41:05,261 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 25 getNewConnection - Enter
+23 Mar 2022 23:41:05,261 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:E:\Databases\airport.db
+23 Mar 2022 23:41:05,261 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 31 getNewConnection - user: null
+23 Mar 2022 23:41:05,262 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 32 getNewConnection - pass: null
+23 Mar 2022 23:41:05,403 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@21fbc4fe)
+23 Mar 2022 23:41:05,406 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 29 findByUsername - Found org.sqlite.jdbc4.JDBC4ResultSet@382d9324 instances
+23 Mar 2022 23:41:05,407 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 35 findByUsername - Exit
+23 Mar 2022 23:41:05,486 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 117 getAll - Enter
+23 Mar 2022 23:41:05,486 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:41:05,486 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 25 getNewConnection - Enter
+23 Mar 2022 23:41:05,486 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:E:\Databases\airport.db
+23 Mar 2022 23:41:05,486 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 31 getNewConnection - user: null
+23 Mar 2022 23:41:05,486 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 32 getNewConnection - pass: null
+23 Mar 2022 23:41:05,486 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@23d86a7c)
+23 Mar 2022 23:41:05,500 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 138 getAll - Exit with([Flight{ID=10, destination='San Francisco', dateTime=15-03-2022 19:36, airport='Kloog2', numberOfTickets=4}, Flight{ID=15, destination='Sibiu', dateTime=16-03-2022 23:36, airport='Africa', numberOfTickets=0}])
+23 Mar 2022 23:41:08,683 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IClientRepo 101 getAll - Enter
+23 Mar 2022 23:41:08,683 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:41:08,683 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 25 getNewConnection - Enter
+23 Mar 2022 23:41:08,684 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:E:\Databases\airport.db
+23 Mar 2022 23:41:08,684 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 31 getNewConnection - user: null
+23 Mar 2022 23:41:08,684 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 32 getNewConnection - pass: null
+23 Mar 2022 23:41:08,685 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1e884cc6)
+23 Mar 2022 23:41:08,692 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IClientRepo 119 getAll - Exit with([Client{ID=1, name='Marconi', address='Strada stramba'}, Client{ID=5, name='Valjean', address='Strada scurta'}, Client{ID=7, name='Miron', address='Strada pacii'}])
+23 Mar 2022 23:42:58,356 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 23 <init> - Initializing FlightRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:42:58,361 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IClientRepo 21 <init> - Initializing ClientRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:42:58,363 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IAdminRepo 22 <init> - Initializing AdminRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:42:58,365 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IReservationRepo 26 <init> - Initializing FlightRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:43:03,036 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 18 findByUsername - Enter looking for admin with username redragon
+23 Mar 2022 23:43:03,036 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:43:03,037 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 25 getNewConnection - Enter
+23 Mar 2022 23:43:03,037 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:E:\Databases\airport.db
+23 Mar 2022 23:43:03,037 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 31 getNewConnection - user: null
+23 Mar 2022 23:43:03,038 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 32 getNewConnection - pass: null
+23 Mar 2022 23:43:03,187 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@11c99b24)
+23 Mar 2022 23:43:03,190 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 29 findByUsername - Found org.sqlite.jdbc4.JDBC4ResultSet@42c43a13 instances
+23 Mar 2022 23:43:03,190 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 35 findByUsername - Exit
+23 Mar 2022 23:43:03,265 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 117 getAll - Enter
+23 Mar 2022 23:43:03,266 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:43:03,266 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 25 getNewConnection - Enter
+23 Mar 2022 23:43:03,266 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:E:\Databases\airport.db
+23 Mar 2022 23:43:03,266 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 31 getNewConnection - user: null
+23 Mar 2022 23:43:03,266 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 32 getNewConnection - pass: null
+23 Mar 2022 23:43:03,267 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@774d807c)
+23 Mar 2022 23:43:03,284 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 138 getAll - Exit with([Flight{ID=10, destination='San Francisco', dateTime=15-03-2022 19:36, airport='Kloog2', numberOfTickets=4}, Flight{ID=15, destination='Sibiu', dateTime=16-03-2022 23:36, airport='Africa', numberOfTickets=0}])
+23 Mar 2022 23:43:14,623 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 117 getAll - Enter
+23 Mar 2022 23:43:14,623 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:43:14,624 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@774d807c)
+23 Mar 2022 23:43:14,624 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 138 getAll - Exit with([Flight{ID=10, destination='San Francisco', dateTime=15-03-2022 19:36, airport='Kloog2', numberOfTickets=4}, Flight{ID=15, destination='Sibiu', dateTime=16-03-2022 23:36, airport='Africa', numberOfTickets=0}])
+23 Mar 2022 23:43:17,127 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 117 getAll - Enter
+23 Mar 2022 23:43:17,128 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:43:17,128 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@774d807c)
+23 Mar 2022 23:43:17,129 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 138 getAll - Exit with([Flight{ID=10, destination='San Francisco', dateTime=15-03-2022 19:36, airport='Kloog2', numberOfTickets=4}, Flight{ID=15, destination='Sibiu', dateTime=16-03-2022 23:36, airport='Africa', numberOfTickets=0}])
+23 Mar 2022 23:44:34,327 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 23 <init> - Initializing FlightRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:44:34,331 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IClientRepo 21 <init> - Initializing ClientRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:44:34,333 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IAdminRepo 22 <init> - Initializing AdminRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:44:34,334 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IReservationRepo 26 <init> - Initializing FlightRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:44:48,460 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 23 <init> - Initializing FlightRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:44:48,464 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IClientRepo 21 <init> - Initializing ClientRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:44:48,465 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IAdminRepo 22 <init> - Initializing AdminRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:44:48,467 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IReservationRepo 26 <init> - Initializing FlightRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:44:53,403 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 18 findByUsername - Enter looking for admin with username redragon
+23 Mar 2022 23:44:53,403 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:44:53,404 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 25 getNewConnection - Enter
+23 Mar 2022 23:44:53,404 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:E:\Databases\airport.db
+23 Mar 2022 23:44:53,404 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 31 getNewConnection - user: null
+23 Mar 2022 23:44:53,404 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 32 getNewConnection - pass: null
+23 Mar 2022 23:44:53,542 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@11c99b24)
+23 Mar 2022 23:44:53,545 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 29 findByUsername - Found org.sqlite.jdbc4.JDBC4ResultSet@42c43a13 instances
+23 Mar 2022 23:44:53,545 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 35 findByUsername - Exit
+23 Mar 2022 23:44:53,620 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 117 getAll - Enter
+23 Mar 2022 23:44:53,621 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:44:53,621 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 25 getNewConnection - Enter
+23 Mar 2022 23:44:53,621 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:E:\Databases\airport.db
+23 Mar 2022 23:44:53,621 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 31 getNewConnection - user: null
+23 Mar 2022 23:44:53,621 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 32 getNewConnection - pass: null
+23 Mar 2022 23:44:53,622 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@774d807c)
+23 Mar 2022 23:44:53,636 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 138 getAll - Exit with([Flight{ID=10, destination='San Francisco', dateTime=15-03-2022 19:36, airport='Kloog2', numberOfTickets=4}, Flight{ID=15, destination='Sibiu', dateTime=16-03-2022 23:36, airport='Africa', numberOfTickets=0}])
+23 Mar 2022 23:45:05,903 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 117 getAll - Enter
+23 Mar 2022 23:45:05,903 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:45:05,903 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@774d807c)
+23 Mar 2022 23:45:05,904 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 138 getAll - Exit with([Flight{ID=10, destination='San Francisco', dateTime=15-03-2022 19:36, airport='Kloog2', numberOfTickets=4}, Flight{ID=15, destination='Sibiu', dateTime=16-03-2022 23:36, airport='Africa', numberOfTickets=0}])
+23 Mar 2022 23:45:24,748 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 23 <init> - Initializing FlightRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:45:24,753 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IClientRepo 21 <init> - Initializing ClientRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:45:24,755 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IAdminRepo 22 <init> - Initializing AdminRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:45:24,757 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IReservationRepo 26 <init> - Initializing FlightRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:45:32,673 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 18 findByUsername - Enter looking for admin with username redragon
+23 Mar 2022 23:45:32,674 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:45:32,674 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 25 getNewConnection - Enter
+23 Mar 2022 23:45:32,674 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:E:\Databases\airport.db
+23 Mar 2022 23:45:32,675 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 31 getNewConnection - user: null
+23 Mar 2022 23:45:32,676 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 32 getNewConnection - pass: null
+23 Mar 2022 23:45:32,808 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@11c99b24)
+23 Mar 2022 23:45:32,811 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 29 findByUsername - Found org.sqlite.jdbc4.JDBC4ResultSet@42c43a13 instances
+23 Mar 2022 23:45:32,811 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 35 findByUsername - Exit
+23 Mar 2022 23:45:32,879 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 117 getAll - Enter
+23 Mar 2022 23:45:32,879 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:45:32,879 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 25 getNewConnection - Enter
+23 Mar 2022 23:45:32,880 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:E:\Databases\airport.db
+23 Mar 2022 23:45:32,880 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 31 getNewConnection - user: null
+23 Mar 2022 23:45:32,880 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 32 getNewConnection - pass: null
+23 Mar 2022 23:45:32,881 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@774d807c)
+23 Mar 2022 23:45:32,895 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 138 getAll - Exit with([Flight{ID=10, destination='San Francisco', dateTime=15-03-2022 19:36, airport='Kloog2', numberOfTickets=4}, Flight{ID=15, destination='Sibiu', dateTime=16-03-2022 23:36, airport='Africa', numberOfTickets=0}])
+23 Mar 2022 23:45:36,799 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IClientRepo 101 getAll - Enter
+23 Mar 2022 23:45:36,800 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:45:36,800 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 25 getNewConnection - Enter
+23 Mar 2022 23:45:36,800 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:E:\Databases\airport.db
+23 Mar 2022 23:45:36,800 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 31 getNewConnection - user: null
+23 Mar 2022 23:45:36,801 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 32 getNewConnection - pass: null
+23 Mar 2022 23:45:36,802 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@8f64173)
+23 Mar 2022 23:45:36,811 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IClientRepo 119 getAll - Exit with([Client{ID=1, name='Marconi', address='Strada stramba'}, Client{ID=5, name='Valjean', address='Strada scurta'}, Client{ID=7, name='Miron', address='Strada pacii'}])
+23 Mar 2022 23:45:42,831 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.ClientRepo 18 findByName - Enter looking for client with name Valjean
+23 Mar 2022 23:45:42,831 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:45:42,831 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@8f64173)
+23 Mar 2022 23:45:42,832 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.ClientRepo 29 findByName - Found org.sqlite.jdbc4.JDBC4ResultSet@245c2f0a instances
+23 Mar 2022 23:45:42,832 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.ClientRepo 34 findByName - Exit
+23 Mar 2022 23:46:34,469 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 23 <init> - Initializing FlightRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:46:34,474 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IClientRepo 21 <init> - Initializing ClientRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:46:34,476 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IAdminRepo 22 <init> - Initializing AdminRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:46:34,479 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IReservationRepo 26 <init> - Initializing FlightRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 23:46:39,122 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 18 findByUsername - Enter looking for admin with username redragon
+23 Mar 2022 23:46:39,122 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:46:39,122 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 25 getNewConnection - Enter
+23 Mar 2022 23:46:39,123 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:E:\Databases\airport.db
+23 Mar 2022 23:46:39,123 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 31 getNewConnection - user: null
+23 Mar 2022 23:46:39,124 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 32 getNewConnection - pass: null
+23 Mar 2022 23:46:39,264 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@11c99b24)
+23 Mar 2022 23:46:39,267 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 29 findByUsername - Found org.sqlite.jdbc4.JDBC4ResultSet@42c43a13 instances
+23 Mar 2022 23:46:39,267 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 35 findByUsername - Exit
+23 Mar 2022 23:46:39,338 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 117 getAll - Enter
+23 Mar 2022 23:46:39,338 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:46:39,338 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 25 getNewConnection - Enter
+23 Mar 2022 23:46:39,338 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:E:\Databases\airport.db
+23 Mar 2022 23:46:39,339 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 31 getNewConnection - user: null
+23 Mar 2022 23:46:39,339 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 32 getNewConnection - pass: null
+23 Mar 2022 23:46:39,340 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@774d807c)
+23 Mar 2022 23:46:39,356 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IFlightRepo 138 getAll - Exit with([Flight{ID=10, destination='San Francisco', dateTime=15-03-2022 19:36, airport='Kloog2', numberOfTickets=4}, Flight{ID=15, destination='Sibiu', dateTime=16-03-2022 23:36, airport='Africa', numberOfTickets=0}])
+23 Mar 2022 23:46:44,718 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IClientRepo 101 getAll - Enter
+23 Mar 2022 23:46:44,718 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:46:44,718 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 25 getNewConnection - Enter
+23 Mar 2022 23:46:44,718 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:E:\Databases\airport.db
+23 Mar 2022 23:46:44,719 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 31 getNewConnection - user: null
+23 Mar 2022 23:46:44,719 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 32 getNewConnection - pass: null
+23 Mar 2022 23:46:44,719 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4f1cf041)
+23 Mar 2022 23:46:44,724 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.IClientRepo 119 getAll - Exit with([Client{ID=1, name='Marconi', address='Strada stramba'}, Client{ID=5, name='Valjean', address='Strada scurta'}, Client{ID=7, name='Miron', address='Strada pacii'}])
+23 Mar 2022 23:46:47,876 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.ClientRepo 18 findByName - Enter looking for client with name Marconi
+23 Mar 2022 23:46:47,877 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:46:47,878 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4f1cf041)
+23 Mar 2022 23:46:47,879 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.ClientRepo 29 findByName - Found org.sqlite.jdbc4.JDBC4ResultSet@313a49bc instances
+23 Mar 2022 23:46:47,879 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.ClientRepo 34 findByName - Exit
+23 Mar 2022 23:46:49,442 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.ClientRepo 18 findByName - Enter looking for client with name Valjean
+23 Mar 2022 23:46:49,443 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:46:49,443 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4f1cf041)
+23 Mar 2022 23:46:49,443 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.ClientRepo 29 findByName - Found org.sqlite.jdbc4.JDBC4ResultSet@4dc10514 instances
+23 Mar 2022 23:46:49,443 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.ClientRepo 34 findByName - Exit
+23 Mar 2022 23:46:52,165 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.ClientRepo 18 findByName - Enter looking for client with name Miron
+23 Mar 2022 23:46:52,165 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 23:46:52,165 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4f1cf041)
+23 Mar 2022 23:46:52,166 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.ClientRepo 29 findByName - Found org.sqlite.jdbc4.JDBC4ResultSet@283d0f72 instances
+23 Mar 2022 23:46:52,166 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.ClientRepo 34 findByName - Exit

@@ -106,7 +106,8 @@ public class MainController {
     public void findFlights(ActionEvent actionEvent) {
         String destination = destinationSearchBox.getText();
         LocalDate date = datePicker.getValue();
-        searchTable.setItems(FXCollections.observableArrayList(controller.searchByDateAndDestination(destination, date)));
+        List<Flight> flights = controller.searchByDateAndDestination(destination, date);
+        searchTable.setItems(FXCollections.observableArrayList(flights));
     }
 
     public void selectFlight(MouseEvent actionEvent) {
@@ -131,15 +132,16 @@ public class MainController {
         addTouristButton.setDisable(false);
         clientAddressTextField.setText(controller.findClientByName(clientName).getAddress());
         touristNamesList.getItems().clear();
+        touristNameTextField.setText(clientName);
     }
 
     public void addTourist(ActionEvent actionEvent) {
         String touristName = touristNameTextField.getText();
-        if (touristName == null || touristName == ""){
+        if (touristName == null || touristName == "") {
             return;
         }
         touristNamesList.getItems().add(0, touristName);
-        if(touristNamesList.getItems().size() >= noSeatsSpinner.getValue()){
+        if (touristNamesList.getItems().size() >= noSeatsSpinner.getValue()) {
             addTouristButton.setDisable(true);
         }
     }
@@ -147,11 +149,9 @@ public class MainController {
     public void changedValue(MouseEvent actionEvent) {
         Integer currentSpinnerValue = noSeatsSpinner.getValue();
         Integer numberOfTourists = touristNamesList.getItems().size();
-        if(currentSpinnerValue > numberOfTourists){
+        if (currentSpinnerValue > numberOfTourists) {
             addTouristButton.setDisable(false);
-        }
-        else if(currentSpinnerValue < numberOfTourists)
-        {
+        } else if (currentSpinnerValue < numberOfTourists) {
             addTouristButton.setDisable(true);
             touristNamesList.getItems().clear();
         }
@@ -160,7 +160,7 @@ public class MainController {
     public void buyTicket(ActionEvent actionEvent) {
         Integer numberOfSeats = noSeatsSpinner.getValue();
         List<String> touristNames = new ArrayList<>(touristNamesList.getItems());
-        if(numberOfSeats != touristNames.size()){
+        if (numberOfSeats != touristNames.size()) {
             Alert incorrectNumberOfSeats = new Alert(Alert.AlertType.ERROR);
             incorrectNumberOfSeats.setTitle("Numarul de turisti");
             incorrectNumberOfSeats.setContentText("Numarul de turisti nu se potriveste cu numarul din lista numelor");
@@ -168,7 +168,7 @@ public class MainController {
             return;
         }
         String clientName = clientComboBox.getValue();
-        if(clientName == null ){
+        if (clientName == null) {
             Alert noClient = new Alert(Alert.AlertType.ERROR);
             noClient.setTitle("Numele Clientului");
             noClient.setContentText("Clientul nu este selectat");
@@ -176,21 +176,24 @@ public class MainController {
             return;
         }
         Flight flight = searchTable.getSelectionModel().getSelectedItem();
-        if(flight == null){
+        if (flight == null) {
             Alert noFlight = new Alert(Alert.AlertType.ERROR);
             noFlight.setTitle("Zborul");
             noFlight.setContentText("Zborul nu este selectat");
             noFlight.show();
             return;
         }
+        if(flight.getNumberOfTickets() == numberOfSeats){
+            flightTable.getItems().remove(flight);
+        }
         controller.addReservation(clientName, flight, numberOfSeats, touristNames);
-            Alert noFlight = new Alert(Alert.AlertType.INFORMATION);
+        Alert noFlight = new Alert(Alert.AlertType.INFORMATION);
         noFlight.setTitle("Succes!");
-        noFlight.setContentText("Rezervarea pentru " + clientName +" a fost facuta cu succes");
+        noFlight.setContentText("Rezervarea pentru " + clientName + " a fost facuta cu succes");
         noFlight.show();
     }
 
-    public void logout(ActionEvent actionEvent){
+    public void logout(ActionEvent actionEvent) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("loginWindow.fxml"));
             fxmlLoader.setController(new LoginController(controller));
@@ -205,5 +208,14 @@ public class MainController {
             alert.setContentText("Nu se poate realiza delogarea");
             alert.show();
         }
+    }
+
+    public void addToSearchedFlights(MouseEvent mouseEvent){
+        Flight flight = flightTable.getSelectionModel().getSelectedItem();
+        if(flight == null){
+            return;
+        }
+        searchTable.getItems().add(0, flight);
+        flightTable.getItems().remove(flight);
     }
 }
