@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ro.ubbcluj.mpp.proiectproblema1.model.ReservationTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-03-23T11:04:24" hostname="DESKTOP-HU6EM17" time="0.016">
+<testsuite name="ro.ubbcluj.mpp.proiectproblema1.model.ReservationTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-03-23T11:50:17" hostname="DESKTOP-HU6EM17" time="0.014">
   <properties/>
-  <testcase name="setNumberOfSeats()" classname="ro.ubbcluj.mpp.proiectproblema1.model.ReservationTest" time="0.012"/>
-  <testcase name="getID()" classname="ro.ubbcluj.mpp.proiectproblema1.model.ReservationTest" time="0.0"/>
+  <testcase name="setNumberOfSeats()" classname="ro.ubbcluj.mpp.proiectproblema1.model.ReservationTest" time="0.009"/>
+  <testcase name="getID()" classname="ro.ubbcluj.mpp.proiectproblema1.model.ReservationTest" time="0.002"/>
   <testcase name="setID()" classname="ro.ubbcluj.mpp.proiectproblema1.model.ReservationTest" time="0.0"/>
-  <testcase name="getTouristNames()" classname="ro.ubbcluj.mpp.proiectproblema1.model.ReservationTest" time="0.001"/>
-  <testcase name="getNumberOfSeats()" classname="ro.ubbcluj.mpp.proiectproblema1.model.ReservationTest" time="0.0"/>
-  <testcase name="setTouristNames()" classname="ro.ubbcluj.mpp.proiectproblema1.model.ReservationTest" time="0.001"/>
+  <testcase name="getTouristNames()" classname="ro.ubbcluj.mpp.proiectproblema1.model.ReservationTest" time="0.0"/>
+  <testcase name="getNumberOfSeats()" classname="ro.ubbcluj.mpp.proiectproblema1.model.ReservationTest" time="0.001"/>
+  <testcase name="setTouristNames()" classname="ro.ubbcluj.mpp.proiectproblema1.model.ReservationTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

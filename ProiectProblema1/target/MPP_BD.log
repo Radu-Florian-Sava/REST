@@ -726,3 +726,85 @@
 23 Mar 2022 13:05:27,449 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 32 getNewConnection - pass: null
 23 Mar 2022 13:05:27,621 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@6c45ee6e)
 23 Mar 2022 13:05:27,670 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.FlightRepo 139 getAll - Exit with([Flight{ID=10, destination='San Francisco', dateTime=15-03-2022 19:36, airport='Kloog2', numberOfTickets=4}, Flight{ID=15, destination='Sibiu', dateTime=16-03-2022 23:36, airport='Africa', numberOfTickets=3}])
+23 Mar 2022 13:55:47,809 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IAdminRepo 22 <init> - Initializing AdminRepo with properties: {foreign_keys=on} 
+23 Mar 2022 13:55:58,162 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 18 findByUsername - Enter looking for admin with username redragon
+23 Mar 2022 13:55:58,162 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 13:55:58,163 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 25 getNewConnection - Enter
+23 Mar 2022 13:55:58,163 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 30 getNewConnection - trying to connect to database ... null
+23 Mar 2022 13:55:58,163 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 31 getNewConnection - user: null
+23 Mar 2022 13:55:58,163 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 32 getNewConnection - pass: null
+23 Mar 2022 13:55:58,167 ERROR ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 41 getNewConnection - java.sql.SQLException: The url cannot be null
+23 Mar 2022 13:55:58,168 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit
+23 Mar 2022 13:56:12,116 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 18 findByUsername - Enter looking for admin with username redragon
+23 Mar 2022 13:56:12,116 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 13:56:12,117 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 25 getNewConnection - Enter
+23 Mar 2022 13:56:12,117 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 30 getNewConnection - trying to connect to database ... null
+23 Mar 2022 13:56:12,117 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 31 getNewConnection - user: null
+23 Mar 2022 13:56:12,117 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 32 getNewConnection - pass: null
+23 Mar 2022 13:56:12,118 ERROR ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 41 getNewConnection - java.sql.SQLException: The url cannot be null
+23 Mar 2022 13:56:12,118 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit
+23 Mar 2022 13:57:47,456 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IAdminRepo 22 <init> - Initializing AdminRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 13:57:53,036 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 18 findByUsername - Enter looking for admin with username redragon
+23 Mar 2022 13:57:53,037 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 13:57:53,037 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 25 getNewConnection - Enter
+23 Mar 2022 13:57:53,037 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:E:\Databases\airport.db
+23 Mar 2022 13:57:53,037 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 31 getNewConnection - user: null
+23 Mar 2022 13:57:53,038 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 32 getNewConnection - pass: null
+23 Mar 2022 13:57:53,170 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4338148)
+23 Mar 2022 13:57:53,173 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 29 findByUsername - Found org.sqlite.jdbc4.JDBC4ResultSet@6c695f9e instances
+23 Mar 2022 13:57:53,173 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 35 findByUsername - Exit
+23 Mar 2022 13:57:58,051 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 18 findByUsername - Enter looking for admin with username redragon
+23 Mar 2022 13:57:58,052 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 13:57:58,052 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4338148)
+23 Mar 2022 13:57:58,053 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 29 findByUsername - Found org.sqlite.jdbc4.JDBC4ResultSet@42367d0d instances
+23 Mar 2022 13:57:58,053 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 35 findByUsername - Exit
+23 Mar 2022 13:57:59,963 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 18 findByUsername - Enter looking for admin with username redragon
+23 Mar 2022 13:57:59,964 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 13:57:59,964 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4338148)
+23 Mar 2022 13:57:59,965 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 29 findByUsername - Found org.sqlite.jdbc4.JDBC4ResultSet@44db84e3 instances
+23 Mar 2022 13:57:59,965 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 35 findByUsername - Exit
+23 Mar 2022 13:58:06,724 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 18 findByUsername - Enter looking for admin with username redragon
+23 Mar 2022 13:58:06,724 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 13:58:06,724 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4338148)
+23 Mar 2022 13:58:06,725 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 29 findByUsername - Found org.sqlite.jdbc4.JDBC4ResultSet@11fde972 instances
+23 Mar 2022 13:58:06,725 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 35 findByUsername - Exit
+23 Mar 2022 13:58:38,266 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IAdminRepo 22 <init> - Initializing AdminRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 13:58:51,646 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 18 findByUsername - Enter looking for admin with username redragon
+23 Mar 2022 13:58:51,646 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 13:58:51,647 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 25 getNewConnection - Enter
+23 Mar 2022 13:58:51,647 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:E:\Databases\airport.db
+23 Mar 2022 13:58:51,647 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 31 getNewConnection - user: null
+23 Mar 2022 13:58:51,648 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 32 getNewConnection - pass: null
+23 Mar 2022 13:58:51,780 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@b4247b0)
+23 Mar 2022 13:58:51,782 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 29 findByUsername - Found org.sqlite.jdbc4.JDBC4ResultSet@1a805be1 instances
+23 Mar 2022 13:58:51,783 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 35 findByUsername - Exit
+23 Mar 2022 13:58:55,520 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 18 findByUsername - Enter looking for admin with username redragon
+23 Mar 2022 13:58:55,520 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 13:58:55,520 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@b4247b0)
+23 Mar 2022 13:58:55,521 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 29 findByUsername - Found org.sqlite.jdbc4.JDBC4ResultSet@4e68fb5b instances
+23 Mar 2022 13:58:55,521 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 35 findByUsername - Exit
+23 Mar 2022 13:59:23,900 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IAdminRepo 22 <init> - Initializing AdminRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 13:59:31,387 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 18 findByUsername - Enter looking for admin with username redragon
+23 Mar 2022 13:59:31,388 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 13:59:31,388 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 25 getNewConnection - Enter
+23 Mar 2022 13:59:31,388 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:E:\Databases\airport.db
+23 Mar 2022 13:59:31,388 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 31 getNewConnection - user: null
+23 Mar 2022 13:59:31,389 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 32 getNewConnection - pass: null
+23 Mar 2022 13:59:31,506 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2a72f899)
+23 Mar 2022 13:59:31,509 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 29 findByUsername - Found org.sqlite.jdbc4.JDBC4ResultSet@515c2e4c instances
+23 Mar 2022 13:59:31,509 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 35 findByUsername - Exit
+23 Mar 2022 13:59:34,999 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 18 findByUsername - Enter looking for admin with username redragon
+23 Mar 2022 13:59:34,999 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 13:59:34,999 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2a72f899)
+23 Mar 2022 13:59:34,999 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 29 findByUsername - Found org.sqlite.jdbc4.JDBC4ResultSet@2dcdc6cb instances
+23 Mar 2022 13:59:35,000 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 35 findByUsername - Exit
+23 Mar 2022 14:05:38,093 INFO  ro.ubbcluj.mpp.proiectproblema1.repository.IAdminRepo 22 <init> - Initializing AdminRepo with properties: {foreign_keys=on, jdbc.url=jdbc:sqlite:E:\Databases\airport.db} 
+23 Mar 2022 14:05:44,401 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 18 findByUsername - Enter looking for admin with username redragon
+23 Mar 2022 14:05:44,401 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 48 getConnection - Enter
+23 Mar 2022 14:05:44,402 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 25 getNewConnection - Enter
+23 Mar 2022 14:05:44,402 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:E:\Databases\airport.db
+23 Mar 2022 14:05:44,402 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 31 getNewConnection - user: null
+23 Mar 2022 14:05:44,403 INFO  ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 32 getNewConnection - pass: null
+23 Mar 2022 14:05:44,528 TRACE ro.ubbcluj.mpp.proiectproblema1.utils.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3d97d2dc)
+23 Mar 2022 14:05:44,530 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 29 findByUsername - Found org.sqlite.jdbc4.JDBC4ResultSet@631f5c61 instances
+23 Mar 2022 14:05:44,531 TRACE ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo 35 findByUsername - Exit
