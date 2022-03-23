@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-public class FlightRepo implements AbstractFlightRepo{
+public class FlightRepo implements IFlightRepo {
 
     private static final Logger logger = LogManager.getLogger();
     private JdbcUtils dbUtils;

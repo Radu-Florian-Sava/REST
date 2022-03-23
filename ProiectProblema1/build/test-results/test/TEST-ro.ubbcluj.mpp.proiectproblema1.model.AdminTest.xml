@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ro.ubbcluj.mpp.proiectproblema1.model.AdminTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-03-16T13:05:04" hostname="DESKTOP-HU6EM17" time="0.023">
+<testsuite name="ro.ubbcluj.mpp.proiectproblema1.model.AdminTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-03-23T11:04:23" hostname="DESKTOP-HU6EM17" time="0.059">
   <properties/>
-  <testcase name="testToString()" classname="ro.ubbcluj.mpp.proiectproblema1.model.AdminTest" time="0.02"/>
-  <testcase name="getPassword()" classname="ro.ubbcluj.mpp.proiectproblema1.model.AdminTest" time="0.0"/>
+  <testcase name="testToString()" classname="ro.ubbcluj.mpp.proiectproblema1.model.AdminTest" time="0.056"/>
+  <testcase name="getPassword()" classname="ro.ubbcluj.mpp.proiectproblema1.model.AdminTest" time="0.001"/>
   <testcase name="getId()" classname="ro.ubbcluj.mpp.proiectproblema1.model.AdminTest" time="0.001"/>
-  <testcase name="setId()" classname="ro.ubbcluj.mpp.proiectproblema1.model.AdminTest" time="0.0"/>
+  <testcase name="setId()" classname="ro.ubbcluj.mpp.proiectproblema1.model.AdminTest" time="0.001"/>
   <testcase name="getUsername()" classname="ro.ubbcluj.mpp.proiectproblema1.model.AdminTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

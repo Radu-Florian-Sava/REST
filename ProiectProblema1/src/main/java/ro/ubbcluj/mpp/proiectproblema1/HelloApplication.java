@@ -4,10 +4,6 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import ro.ubbcluj.mpp.proiectproblema1.model.Flight;
-import ro.ubbcluj.mpp.proiectproblema1.repository.ClientRepo;
-import ro.ubbcluj.mpp.proiectproblema1.repository.FlightRepo;
-import ro.ubbcluj.mpp.proiectproblema1.repository.ReservationRepo;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -22,17 +18,12 @@ public class HelloApplication extends Application {
         } catch (IOException e) {
             System.out.println("Cannot find bd.config " + e);
         }
-        ClientRepo clientRepo = new ClientRepo(props);
-        FlightRepo flightRepo = new FlightRepo(props);
-        ReservationRepo reservationRepo = new ReservationRepo(props, flightRepo, clientRepo);
-        for (Flight x : flightRepo.getAll())
-            System.out.println(x);
         launch();
     }
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("mainWindow.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         stage.setTitle("Hello!");
         stage.setScene(scene);

@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-public class ReservationRepo implements AbstractReservationRepo {
+public class ReservationRepo implements IReservationRepo {
 
     private static final Logger logger = LogManager.getLogger();
     private JdbcUtils dbUtils;

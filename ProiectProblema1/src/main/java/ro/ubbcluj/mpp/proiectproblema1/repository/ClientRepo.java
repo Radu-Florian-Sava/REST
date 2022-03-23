@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-public class ClientRepo implements AbstractClientRepo{
+public class ClientRepo implements IClientRepo {
 
     private static final Logger logger = LogManager.getLogger();
     private JdbcUtils dbUtils;
