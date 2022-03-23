@@ -7,47 +7,42 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo;
-import ro.ubbcluj.mpp.proiectproblema1.service.AdminService;
+import ro.ubbcluj.mpp.proiectproblema1.control.Controller;
+import ro.ubbcluj.mpp.proiectproblema1.model.Admin;
 
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.Objects;
-import java.util.Properties;
 
 public class LoginController {
-    private final AdminService adminService;
-    @FXML
-    TextField usernameTextField;
-    @FXML
-    TextField passwordTextField;
-    @FXML
-    Button loginButton;
+    private Controller controller;
 
-    public LoginController() {
-        Properties props = new Properties();
-        props.setProperty("foreign_keys", "on");
-        try {
-            props.load(new FileReader("bd.config"));
-        } catch (IOException e) {
-            System.out.println("Cannot find bd.config " + e);
-        }
-        adminService = new AdminService(new AdminRepo(props));
+    @FXML
+    private TextField usernameTextField;
+    @FXML
+    private PasswordField passwordField;
+
+
+    public LoginController(Controller controller) {
+        this.controller = controller;
     }
 
     public void loginUser(ActionEvent actionEvent) {
-        if (!Objects.equals(adminService.login(usernameTextField.getText()).getPassword(), passwordTextField.getText())) {
+        Admin user = controller.login(usernameTextField.getText());
+        if (user == null || !Objects.equals(user.getPassword(), passwordField.getText())) {
             Alert alert = new Alert(Alert.AlertType.NONE);
-            alert.setTitle("Parola incorecta!");
+            alert.setTitle("Eroare la autentificare!");
             alert.show();
         } else {
             try {
-                Parent parent = FXMLLoader.load(getClass().getResource("mainWindow.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("mainWindow.fxml"));
+                fxmlLoader.setController(new MainController(controller));
+                Parent parent = fxmlLoader.load();
                 Scene scene = new Scene(parent);
                 Stage appStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                appStage.close();
                 appStage.setScene(scene);
                 appStage.show();
             } catch (IOException e) {

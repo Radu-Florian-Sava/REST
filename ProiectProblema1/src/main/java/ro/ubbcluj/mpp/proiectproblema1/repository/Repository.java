@@ -13,4 +13,3 @@ public interface Repository<T extends Identifiable<Tid>, Tid> {
     List<T> getAll();
 
 }
-

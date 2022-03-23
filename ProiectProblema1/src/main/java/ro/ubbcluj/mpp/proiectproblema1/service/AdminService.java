@@ -5,11 +5,12 @@ import ro.ubbcluj.mpp.proiectproblema1.repository.AdminRepo;
 
 public class AdminService {
     AdminRepo adminRepo;
-    public AdminService(AdminRepo adminRepo){
+
+    public AdminService(AdminRepo adminRepo) {
         this.adminRepo = adminRepo;
     }
 
-    public Admin login(String username){
+    public Admin login(String username) {
         return adminRepo.findByUsername(username);
     }
 }
