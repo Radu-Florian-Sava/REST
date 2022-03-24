@@ -105,6 +105,9 @@ public class MainController {
         LocalDate date = datePicker.getValue();
         List<Flight> flights = controller.searchByDateAndDestination(destination, date);
         searchTable.setItems(FXCollections.observableArrayList(flights));
+        for(Flight x: flights){
+            flightTable.getItems().remove(x);
+        }
     }
 
     public void selectFlight(MouseEvent actionEvent) {
@@ -180,14 +183,17 @@ public class MainController {
             noFlight.show();
             return;
         }
-        if(flight.getNumberOfTickets() == numberOfSeats){
-            flightTable.getItems().remove(flight);
-        }
+        searchTable.getItems().remove(flight);
         controller.addReservation(clientName, flight, numberOfSeats, touristNames);
+        if(flight.getNumberOfTickets() != numberOfSeats){
+            flight.setNumberOfTickets(flight.getNumberOfTickets()-numberOfSeats);
+            searchTable.getItems().add(flight);
+        }
         Alert noFlight = new Alert(Alert.AlertType.INFORMATION);
         noFlight.setTitle("Succes!");
         noFlight.setContentText("Rezervarea pentru " + clientName + " a fost facuta cu succes");
         noFlight.show();
+
     }
 
     public void logout(ActionEvent actionEvent) {

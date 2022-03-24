@@ -33,12 +33,10 @@ public class Controller {
         } catch (IOException e) {
             System.out.println("Cannot find bd.config " + e);
         }
-        FlightRepo flightRepo = new FlightRepo(props);
-        ClientRepo clientRepo = new ClientRepo(props);
         adminService = new AdminService(new AdminRepo(props));
-        flightService = new FlightService(flightRepo);
-        clientService = new ClientService(clientRepo);
-        reservationService = new ReservationService(new ReservationRepo(props, flightRepo, clientRepo));
+        flightService = new FlightService(new FlightRepo(props));
+        clientService = new ClientService(new ClientRepo(props));
+        reservationService = new ReservationService(new ReservationRepo(props));
     }
 
     public Admin login(String username) {

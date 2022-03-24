@@ -12,6 +12,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -19,14 +20,10 @@ import java.util.Properties;
 public class IReservationRepo implements Repository<Reservation, Pair<Flight, Client>> {
     private static final Logger logger = LogManager.getLogger();
     private JdbcUtils dbUtils;
-    private FlightRepo flightRepo;
-    private ClientRepo clientRepo;
 
-    public IReservationRepo(Properties properties, FlightRepo flightRepo, ClientRepo clientRepo) {
-        logger.info("Initializing FlightRepo with properties: {} ", properties);
+    public IReservationRepo(Properties properties) {
+        logger.info("Initializing ReservationRepo with properties: {} ", properties);
         dbUtils = new JdbcUtils(properties);
-        this.clientRepo = clientRepo;
-        this.flightRepo = flightRepo;
     }
 
     @Override
@@ -60,8 +57,11 @@ public class IReservationRepo implements Repository<Reservation, Pair<Flight, Cl
                 }
             }
             int newNumberOfTickets = elem.getID().getKey().getNumberOfTickets() - elem.getNumberOfSeats();
-            elem.getID().getKey().setNumberOfTickets(newNumberOfTickets);
-            flightRepo.update(elem.getID().getKey(), elem.getID().getKey().getID());
+            PreparedStatement preStmFlight=con.prepareStatement("update Flights set numberOfTickets= ? where id=?" );
+            preStmFlight.setInt(1, newNumberOfTickets);
+            preStmFlight.setInt(2, flightId);
+            preStmFlight.executeUpdate();
+            logger.trace("Update flight with id = {}", flightId);
         } catch (SQLException ex) {
             logger.error(ex);
             System.err.println("Error BD" + ex);
@@ -78,8 +78,11 @@ public class IReservationRepo implements Repository<Reservation, Pair<Flight, Cl
             preStm.setInt(1, id.getKey().getID());
             preStm.setInt(2, id.getValue().getID());
             int newNumberOfTickets = id.getKey().getNumberOfTickets() + findById(id).getNumberOfSeats();
-            id.getKey().setNumberOfTickets(newNumberOfTickets);
-            flightRepo.update(id.getKey(), id.getKey().getID());
+            PreparedStatement preStmFlight=con.prepareStatement("update Flights set numberOfTickets= ? where id=?" );
+            preStmFlight.setInt(1, newNumberOfTickets);
+            preStmFlight.setInt(2, id.getKey().getID());
+            preStmFlight.executeUpdate();
+            logger.trace("Update flight with id = {}", id.getKey().getID());
             int result = preStm.executeUpdate();
             logger.trace("Deleted {} instances", result);
         } catch (SQLException ex) {
@@ -105,8 +108,27 @@ public class IReservationRepo implements Repository<Reservation, Pair<Flight, Cl
             ResultSet result = preStm.executeQuery();
             result.next();
             int numberOfSeats = result.getInt("numberOfSeats");
-            Flight flight = flightRepo.findById(id.getKey().getID());
-            Client client = clientRepo.findById(id.getValue().getID());
+            int flightId = id.getKey().getID();
+            int clientId = id.getValue().getID();
+            Flight flight;
+            PreparedStatement preStmFlight=con.prepareStatement("select destination, dateTime, airport, numberOfTickets " +
+                    "from Flights where id=?" );
+            preStmFlight.setInt(1, flightId);
+            ResultSet resultFlight = preStm.executeQuery();
+            resultFlight.next();
+            String destination = resultFlight.getString("destination");
+            String datetime = resultFlight.getString("dateTime");
+            String airport = resultFlight.getString("airport");
+            int numberOfTickets = resultFlight.getInt("numberOfTickets");
+            flight = new Flight(flightId, destination, LocalDateTime.parse(datetime), airport, numberOfTickets);
+            Client client;
+            PreparedStatement preStmClient = con.prepareStatement("select name, address from Clients where id=?");
+            preStmClient.setInt(1, clientId);
+            ResultSet resultClient = preStm.executeQuery();
+            resultClient.next();
+            String name = resultClient.getString("name");
+            String address = resultClient.getString("address");
+            client = new Client(clientId, name, address);
             List<String> names = new ArrayList<>();
             Connection conTourists = dbUtils.getConnection();
             PreparedStatement prepTourists = conTourists.prepareStatement("select * from ReservationsTourists where " +
@@ -138,8 +160,25 @@ public class IReservationRepo implements Repository<Reservation, Pair<Flight, Cl
                 int clientId = result.getInt("clientId");
                 int flightId = result.getInt("flightId");
                 int numberOfSeats = result.getInt("numberOfSeats");
-                Flight flight = flightRepo.findById(flightId);
-                Client client = clientRepo.findById(clientId);
+                Flight flight;
+                PreparedStatement preStmFlight=con.prepareStatement("select destination, dateTime, airport, numberOfTickets " +
+                        "from Flights where id=?" );
+                preStmFlight.setInt(1, flightId);
+                ResultSet resultFlight = preStm.executeQuery();
+                resultFlight.next();
+                String destination = resultFlight.getString("destination");
+                String datetime = resultFlight.getString("dateTime");
+                String airport = resultFlight.getString("airport");
+                int numberOfTickets = resultFlight.getInt("numberOfTickets");
+                flight = new Flight(flightId, destination, LocalDateTime.parse(datetime), airport, numberOfTickets);
+                Client client;
+                PreparedStatement preStmClient = con.prepareStatement("select name, address from Clients where id=?");
+                preStmClient.setInt(1, clientId);
+                ResultSet resultClient = preStm.executeQuery();
+                resultClient.next();
+                String name = resultClient.getString("name");
+                String address = resultClient.getString("address");
+                client = new Client(clientId, name, address);
                 List<String> names = new ArrayList<>();
                 PreparedStatement prepTourists = con.prepareStatement("select * from ReservationsTourists where " +
                         "flightId=? and clientId=?");

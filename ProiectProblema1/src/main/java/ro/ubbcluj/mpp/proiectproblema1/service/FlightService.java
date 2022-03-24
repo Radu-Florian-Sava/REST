@@ -5,7 +5,6 @@ import ro.ubbcluj.mpp.proiectproblema1.repository.FlightRepo;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Objects;
 
 public class FlightService {
     FlightRepo flightRepo;
@@ -15,14 +14,10 @@ public class FlightService {
     }
 
     public List<Flight> getAllAvailable() {
-        return flightRepo.getAll().stream().filter(x -> x.getNumberOfTickets() > 0).toList();
+        return flightRepo.getAllAvailable();
     }
 
     public List<Flight> searchByDateAndDestination(String destination, LocalDate date) {
-        return flightRepo.getAll().stream().filter(
-                x -> Objects.equals(x.getDestination(), destination) &&
-                        x.getDateTime().toLocalDate().equals(date) &&
-                        x.getNumberOfTickets() > 0
-        ).toList();
+        return flightRepo.searchByDateAndDestination(destination, date);
     }
 }

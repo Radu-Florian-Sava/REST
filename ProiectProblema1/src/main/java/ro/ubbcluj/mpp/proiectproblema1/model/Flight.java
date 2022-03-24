@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Objects;
 
 public class Flight implements Identifiable<Integer> {
 
@@ -88,5 +89,18 @@ public class Flight implements Identifiable<Integer> {
                 ", airport='" + airport + '\'' +
                 ", numberOfTickets=" + numberOfTickets +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Flight)) return false;
+        Flight flight = (Flight) o;
+        return getID() == flight.getID();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getID());
     }
 }
