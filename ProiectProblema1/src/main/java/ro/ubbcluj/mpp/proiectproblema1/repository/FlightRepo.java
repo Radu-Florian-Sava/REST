@@ -67,6 +67,7 @@ public class FlightRepo extends IFlightRepo {
                 String datetime = result.getString("dateTime");
                 String airport = result.getString("airport");
                 int numberOfTickets = result.getInt("numberOfTickets");
+                destination = result.getString("destination");
                 Flight flight = new Flight(id, destination, LocalDateTime.parse(datetime), airport, numberOfTickets);
                 flights.add(flight);
             }
