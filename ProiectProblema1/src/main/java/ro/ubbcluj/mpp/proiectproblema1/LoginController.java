@@ -32,8 +32,9 @@ public class LoginController {
     public void loginUser(ActionEvent actionEvent) {
         Admin user = controller.login(usernameTextField.getText());
         if (user == null || !Objects.equals(user.getPassword(), passwordField.getText())) {
-            Alert alert = new Alert(Alert.AlertType.NONE);
+            Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Eroare la autentificare!");
+            alert.setContentText("Datele de autentificare nu sunt corecte, verificati parola");
             alert.show();
         } else {
             try {

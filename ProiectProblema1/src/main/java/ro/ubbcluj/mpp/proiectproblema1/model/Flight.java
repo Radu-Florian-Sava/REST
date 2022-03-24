@@ -1,6 +1,8 @@
 package ro.ubbcluj.mpp.proiectproblema1.model;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
 public class Flight implements Identifiable<Integer> {
@@ -43,6 +45,14 @@ public class Flight implements Identifiable<Integer> {
         this.dateTime = dateTime;
     }
 
+    public LocalDate getDate() {
+        return dateTime.toLocalDate();
+    }
+
+    public LocalTime getTime() {
+        return dateTime.toLocalTime();
+    }
+
     public String getAirport() {
         return airport;
     }
@@ -74,7 +84,7 @@ public class Flight implements Identifiable<Integer> {
         return "Flight{" +
                 "ID=" + ID +
                 ", destination='" + destination + '\'' +
-                ", dateTime=" + dateTime.format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm"))   +
+                ", dateTime=" + dateTime.format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm")) +
                 ", airport='" + airport + '\'' +
                 ", numberOfTickets=" + numberOfTickets +
                 '}';

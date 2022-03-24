@@ -91,15 +91,12 @@ public class MainController {
     public void initialize() {
         destinationColumn.setCellValueFactory(new PropertyValueFactory<>("destination"));
         numberOfTicketsColumn.setCellValueFactory(new PropertyValueFactory<>("numberOfTickets"));
-        departureDateColumn.setCellValueFactory((data) -> new SimpleStringProperty(data.getValue().getDateTime()
-                .toLocalDate().toString()));
-        departureTimeColumn.setCellValueFactory((data) -> new SimpleStringProperty(data.getValue().getDateTime()
-                .toLocalTime().toString()));
+        departureDateColumn.setCellValueFactory((data) -> new SimpleStringProperty(data.getValue().getDate().toString()));
+        departureTimeColumn.setCellValueFactory((data) -> new SimpleStringProperty(data.getValue().getTime().toString()));
         List<Flight> availableFlights = controller.getAllAvailableFlights();
         flightTable.setItems(FXCollections.observableArrayList(availableFlights));
         searchNumberOfTickets.setCellValueFactory(new PropertyValueFactory<>("numberOfTickets"));
-        searchHour.setCellValueFactory((data) -> new SimpleStringProperty(data.getValue().getDateTime()
-                .toLocalTime().toString()));
+        searchHour.setCellValueFactory((data) -> new SimpleStringProperty(data.getValue().getTime().toString()));
         addTouristButton.setDisable(true);
     }
 
