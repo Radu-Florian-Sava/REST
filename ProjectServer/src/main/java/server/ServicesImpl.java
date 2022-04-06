@@ -33,7 +33,7 @@ public class ServicesImpl implements IServices {
     }
 
     @Override
-    public void login(Admin admin, IObserver client) throws ProjectException {
+    public synchronized void login(Admin admin, IObserver client) throws ProjectException {
         Admin tAdmin = adminRepo.findByUsername(admin.getUsername());
         if (tAdmin != null) {
             if (loggedAdmins.get(tAdmin.getUsername()) != null)
@@ -44,30 +44,44 @@ public class ServicesImpl implements IServices {
     }
 
     @Override
-    public void logout(Admin admin, IObserver client) throws ProjectException {
+    public synchronized void logout(Admin admin, IObserver client) throws ProjectException {
         IObserver localAdmin = loggedAdmins.remove(admin.getUsername());
         if (localAdmin == null)
             throw new ProjectException("User " + admin.getUsername() + " is not logged in.");
     }
 
     @Override
-    public List<Flight> getAllAvailableFlights() throws ProjectException {
-        return null;
+    public synchronized List<Flight> getAllAvailableFlights() throws ProjectException {
+        List<Flight> flights=flightRepo.getAllAvailable();
+        if(flights == null)
+            throw new ProjectException("No flights available");
+        System.out.println("Avaliable flights: " + flights.size());
+        return flights;
     }
 
     @Override
     public List<Flight> searchByDateAndDestination(String destination, LocalDate date) throws ProjectException {
-        return null;
+        List<Flight> flights=flightRepo.searchByDateAndDestination(destination, date);
+        if(flights == null)
+            throw new ProjectException("No flights found");
+        System.out.println("Avaliable flights: " + flights.size());
+        return flights;
     }
 
     @Override
     public List<String> getAllClientNames() throws ProjectException {
-        return null;
+        List<String> clients=clientRepo.getAllClientNames();
+        if(clients == null)
+            throw new ProjectException("No clients");
+        System.out.println("Number of clients: " + clients.size());
+        return clients;
     }
 
     @Override
     public Client findClientByName(String name) throws ProjectException {
-        return null;
+        if(name == null)
+            throw new ProjectException("No name selected");
+        return clientRepo.findByName(name);
     }
 
     @Override

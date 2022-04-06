@@ -1,5 +1,6 @@
 package client.gui;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -56,6 +57,8 @@ public class LoginController {
 
             stage.show();
             windowCtrl.setUser(crtUser);
+            Platform.runLater(() -> windowCtrl.loadFlights());
+            Platform.runLater(() -> windowCtrl.loadClientNames());
             ((Node) (actionEvent.getSource())).getScene().getWindow().hide();
 
         } catch (ProjectException e) {
@@ -68,7 +71,6 @@ public class LoginController {
 
 
     }
-
 
     public void setUser(Admin admin) {
         this.crtUser = admin;

@@ -1,6 +1,7 @@
 package network.rpc;
 
 import model.Admin;
+import model.Client;
 import model.Flight;
 import services.IObserver;
 import services.IServices;
@@ -12,6 +13,7 @@ import java.io.ObjectOutputStream;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.Socket;
+import java.time.LocalDate;
 import java.util.List;
 
 
@@ -100,6 +102,48 @@ public class ClientRpcReflectionWorker implements Runnable, IObserver {
             return okResponse;
 
         } catch (ProjectException e) {
+            return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
+        }
+    }
+
+    private Response handleGET_FLIGHTS(Request request){
+        System.out.println("GetFlights Request ...");
+        try {
+           List<Flight> flights=server.getAllAvailableFlights();
+           return new Response.Builder().type(ResponseType.OK).data(flights).build();
+        } catch ( ProjectException e) {
+            return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
+        }
+    }
+
+    private Response handleSEARCH_FLIGHTS(Request request){
+        System.out.println("GetSearchFlights Request ...");
+        String destination = (String)((List<Object>)request.data()).get(0);
+        LocalDate date= (LocalDate) ((List<Object>)request.data()).get(1);
+        try {
+            List<Flight> flights=server.searchByDateAndDestination(destination, date);
+            return new Response.Builder().type(ResponseType.OK).data(flights).build();
+        } catch ( ProjectException e) {
+            return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
+        }
+    }
+
+    private Response handleGET_CLIENT(Request request){
+        System.out.println("GetClient Request ...");
+        try {
+            Client client=server.findClientByName((String)request.data());
+            return new Response.Builder().type(ResponseType.OK).data(client).build();
+        } catch ( ProjectException e) {
+            return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
+        }
+    }
+
+    private Response handleGET_CLIENT_NAMES(Request request){
+        System.out.println("GetClientNames Request ...");
+        try {
+            List<String> clients=server.getAllClientNames();
+            return new Response.Builder().type(ResponseType.OK).data(clients).build();
+        } catch ( ProjectException e) {
             return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
         }
     }
