@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <TableView fx:id="flightTable" onMouseClicked="#addToSearchedFlights" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+            <columns>
+                <TableColumn fx:id="destinationColumn" prefWidth="75.0" text="Destinatie" />
+                <TableColumn fx:id="departureDateColumn" prefWidth="75.0" text="Data plecarii" />
+                <TableColumn fx:id="departureTimeColumn" prefWidth="75.0" text="Ora plecarii" />
+                <TableColumn fx:id="numberOfTicketsColumn" prefWidth="75.0" text="Nr. Locuri" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="14.0" GridPane.columnIndex="2">
+         <children>
+            <TextField fx:id="destinationSearchBox" promptText="Introduceti destinatia" />
+            <DatePicker fx:id="datePicker" promptText="Introduceti data" />
+            <Button fx:id="searchButton" mnemonicParsing="false" onAction="#findFlights" text="Cauta zboruri" />
+         </children>
+      </VBox>
+      <TableView fx:id="searchTable" onMouseClicked="#selectFlight" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+        <columns>
+          <TableColumn fx:id="searchHour" prefWidth="75.0" text="Ora" />
+          <TableColumn fx:id="searchNumberOfTickets" prefWidth="75.0" text="Locuri disp." />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <VBox alignment="CENTER" spacing="5.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <children>
+            <ComboBox fx:id="clientComboBox" onAction="#selectedClient" prefWidth="150.0" />
+            <Spinner fx:id="noSeatsSpinner" onMouseClicked="#changedValue" />
+            <TextField fx:id="clientAddressTextField" editable="false" promptText="Adresa clientului" />
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#buyTicket" text="Procurati bilet" />
+                  <Button mnemonicParsing="false" onAction="#logout" text="Delogare" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+      <ListView fx:id="touristNamesList" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2" />
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="1">
+         <children>
+            <TextField fx:id="destinationTextField" promptText="Destinatie" />
+            <TextField fx:id="airportTextField" promptText="Aeroport" />
+            <TextField fx:id="dateTimeTextField" promptText="Plecare" />
+            <TextField fx:id="numberOfTicketsTextField" promptText="Numar de locuri disponibile" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" spacing="40.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <children>
+            <TextField fx:id="touristNameTextField" />
+            <Button fx:id="addTouristButton" mnemonicParsing="false" onAction="#addTourist" text="Adauga persoana pentru bilet" />
+         </children>
+      </VBox>
+      <VBox alignment="TOP_RIGHT" prefHeight="200.0" prefWidth="100.0" spacing="18.0">
+         <children>
+            <Label text="Destinatie">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <Label text="Aeroport">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <Label text="Plecare">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <Label text="Locuri disponibile">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+    </children>
+</GridPane>

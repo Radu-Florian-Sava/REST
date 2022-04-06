@@ -1,0 +1,8 @@
+rootProject.name = 'Proiect1ClientServer'
+include 'ProjectModel'
+include 'ProjectServices'
+include 'ProjectPersistence'
+include 'ProjectNetworking'
+include 'ProjectServer'
+include 'ProjectClientFx'
+

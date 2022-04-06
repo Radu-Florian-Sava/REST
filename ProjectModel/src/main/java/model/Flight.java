@@ -1,0 +1,107 @@
+package model;
+
+import java.io.Serializable;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Objects;
+
+public class Flight implements Identifiable<Integer>, Serializable {
+
+    private int ID;
+    private String destination;
+    private LocalDateTime dateTime;
+    private String airport;
+    private int numberOfTickets;
+
+    public Flight() {
+        this.ID = 0;
+        this.destination = "";
+        this.dateTime = LocalDateTime.now();
+        this.airport = "";
+        this.numberOfTickets = 0;
+    }
+
+    public Flight(int ID, String destination, LocalDateTime dateTime, String airport, int numberOfTickets) {
+        this.ID = ID;
+        this.destination = destination;
+        this.dateTime = dateTime;
+        this.airport = airport;
+        this.numberOfTickets = numberOfTickets;
+    }
+
+    public String getDestination() {
+        return destination;
+    }
+
+    public void setDestination(String destination) {
+        this.destination = destination;
+    }
+
+    public LocalDateTime getDateTime() {
+        return dateTime;
+    }
+
+    public void setDateTime(LocalDateTime dateTime) {
+        this.dateTime = dateTime;
+    }
+
+    public LocalDate getDate() {
+        return dateTime.toLocalDate();
+    }
+
+    public LocalTime getTime() {
+        return dateTime.toLocalTime();
+    }
+
+    public String getAirport() {
+        return airport;
+    }
+
+    public void setAirport(String airport) {
+        this.airport = airport;
+    }
+
+    public int getNumberOfTickets() {
+        return numberOfTickets;
+    }
+
+    public void setNumberOfTickets(int numberOfTickets) {
+        this.numberOfTickets = numberOfTickets;
+    }
+
+    @Override
+    public Integer getID() {
+        return ID;
+    }
+
+    @Override
+    public void setID(Integer id) {
+        this.ID = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Flight{" +
+                "ID=" + ID +
+                ", destination='" + destination + '\'' +
+                ", dateTime=" + dateTime.format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm")) +
+                ", airport='" + airport + '\'' +
+                ", numberOfTickets=" + numberOfTickets +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Flight)) return false;
+        Flight flight = (Flight) o;
+        return getID() == flight.getID();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getID());
+    }
+}
