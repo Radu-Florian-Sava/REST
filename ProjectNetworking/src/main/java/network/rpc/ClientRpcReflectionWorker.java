@@ -106,6 +106,22 @@ public class ClientRpcReflectionWorker implements Runnable, IObserver {
         }
     }
 
+    private Response handleBUY_TICKET(Request request) {
+        System.out.println("BuyTicket request...");
+        List<Object> parameters = (List<Object>) request.data();
+        String clientName = (String) parameters.get(0);
+        Flight flight =(Flight) parameters.get(1);
+        Integer numberOfTickets = (Integer) parameters.get(2);
+        List<String> clientNames = (List<String>) parameters.get(3);
+        try {
+            server.addReservation(clientName, flight, numberOfTickets, clientNames);
+            return okResponse;
+
+        } catch (ProjectException e) {
+            return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
+        }
+    }
+
     private Response handleGET_FLIGHTS(Request request){
         System.out.println("GetFlights Request ...");
         try {
@@ -155,8 +171,8 @@ public class ClientRpcReflectionWorker implements Runnable, IObserver {
     }
 
     @Override
-    public void flightsChanged(List<Flight> flights) throws ProjectException {
-        Response resp=new Response.Builder().type(ResponseType.GET_FLIGHTS).data(flights).build();
+    public void flightsChanged(Flight flight) throws ProjectException {
+        Response resp=new Response.Builder().type(ResponseType.FLIGHTS_CHANGED).data(flight).build();
         System.out.println("Flights list changed");
         try {
             sendResponse(resp);

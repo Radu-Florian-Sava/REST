@@ -3,6 +3,7 @@ package server;
 import model.Admin;
 import model.Client;
 import model.Flight;
+import model.Reservation;
 import repository.AdminRepo;
 import repository.ClientRepo;
 import repository.FlightRepo;
@@ -60,7 +61,7 @@ public class ServicesImpl implements IServices {
     }
 
     @Override
-    public List<Flight> searchByDateAndDestination(String destination, LocalDate date) throws ProjectException {
+    public synchronized List<Flight> searchByDateAndDestination(String destination, LocalDate date) throws ProjectException {
         List<Flight> flights=flightRepo.searchByDateAndDestination(destination, date);
         if(flights == null)
             throw new ProjectException("No flights found");
@@ -69,7 +70,7 @@ public class ServicesImpl implements IServices {
     }
 
     @Override
-    public List<String> getAllClientNames() throws ProjectException {
+    public synchronized List<String> getAllClientNames() throws ProjectException {
         List<String> clients=clientRepo.getAllClientNames();
         if(clients == null)
             throw new ProjectException("No clients");
@@ -78,14 +79,23 @@ public class ServicesImpl implements IServices {
     }
 
     @Override
-    public Client findClientByName(String name) throws ProjectException {
+    public synchronized Client findClientByName(String name) throws ProjectException {
         if(name == null)
             throw new ProjectException("No name selected");
         return clientRepo.findByName(name);
     }
 
     @Override
-    public void addReservation(String clientName, Flight flight, int numberOfSeats, List<String> clientNames) throws ProjectException {
-
+    public synchronized void addReservation(String clientName, Flight flight, int numberOfSeats, List<String> clientNames) throws ProjectException {
+        if(clientName == null)
+            throw new ProjectException("No name selected");
+        if(flight == null)
+            throw new ProjectException("No flight selected");
+        Client client = clientRepo.findByName(clientName);
+        Reservation reservation = new Reservation(flight,client, clientNames, numberOfSeats);
+        reservationRepo.add(reservation);
+        for(IObserver admin: loggedAdmins.values()){
+                admin.flightsChanged(flight);
+        }
     }
 }

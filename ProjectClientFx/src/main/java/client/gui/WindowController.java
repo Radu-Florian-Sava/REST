@@ -1,5 +1,6 @@
 package client.gui;
 
+import javafx.application.Platform;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -89,7 +90,6 @@ public class WindowController implements Initializable, IObserver {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        System.out.println("END INIT!!!!!!!!!");
             destinationColumn.setCellValueFactory(new PropertyValueFactory<>("destination"));
             numberOfTicketsColumn.setCellValueFactory(new PropertyValueFactory<>("numberOfTickets"));
             departureDateColumn.setCellValueFactory((data) -> new SimpleStringProperty(data.getValue().getDate().toString()));
@@ -97,11 +97,21 @@ public class WindowController implements Initializable, IObserver {
             searchNumberOfTickets.setCellValueFactory(new PropertyValueFactory<>("numberOfTickets"));
             searchHour.setCellValueFactory((data) -> new SimpleStringProperty(data.getValue().getTime().toString()));
             addTouristButton.setDisable(true);
+            noSeatsSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 1, 1));
+            System.out.println("END INIT!!!!!!!!!");
+
     }
 
     @Override
-    public void flightsChanged(List<Flight> flights) throws ProjectException {
-
+    public void flightsChanged(Flight flight) throws ProjectException {
+        Platform.runLater(()->{
+            if (flight==null){
+                Util.showWarning("Zboruri", "Zbor inexistent");
+                return;
+            }
+            flightTable.getItems().remove(flight);
+            searchTable.getItems().remove(flight);
+        });
     }
 
     public void logoutBackend() {
@@ -149,7 +159,7 @@ public class WindowController implements Initializable, IObserver {
         destinationTextField.setText(clickedFlight.getDestination());
         airportTextField.setText(clickedFlight.getAirport());
         dateTimeTextField.setText(clickedFlight.getDateTime().toString());
-        Integer numberOfTickets = clickedFlight.getNumberOfTickets();
+        int numberOfTickets = clickedFlight.getNumberOfTickets();
         numberOfTicketsTextField.setText(Integer.toString(numberOfTickets));
         noSeatsSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1, numberOfTickets, 1));
     }
@@ -218,19 +228,15 @@ public class WindowController implements Initializable, IObserver {
             noFlight.show();
             return;
         }
-        searchTable.getItems().remove(flight);
+        searchTable.getItems().clear();
         try {
             server.addReservation(clientName, flight, numberOfSeats, touristNames);
         } catch (ProjectException e) {
             e.printStackTrace();
         }
-        if(flight.getNumberOfTickets() != numberOfSeats){
-            flight.setNumberOfTickets(flight.getNumberOfTickets()-numberOfSeats);
-            searchTable.getItems().add(flight);
-        }
         Alert noFlight = new Alert(Alert.AlertType.INFORMATION);
         noFlight.setTitle("Succes!");
-        noFlight.setContentText("Rezervarea pentru " + clientName + " a fost facuta cu succes");
+        noFlight.setContentText("Rezervarea pentru client a fost facuta cu succes");
         noFlight.show();
     }
 

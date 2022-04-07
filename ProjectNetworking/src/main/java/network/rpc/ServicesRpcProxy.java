@@ -120,7 +120,13 @@ public class ServicesRpcProxy implements IServices {
 
     @Override
     public void addReservation(String clientName, Flight flight, int numberOfSeats, List<String> clientNames) throws ProjectException {
-
+        Request req = new Request.Builder().type(RequestType.BUY_TICKET).data(Arrays.asList(clientName, flight, numberOfSeats, clientNames)).build();
+        sendRequest(req);
+        Response response = readResponse();
+        if (response.type() == ResponseType.ERROR) {
+            String err = response.data().toString();
+            throw new ProjectException(err);
+        }
     }
 
     private void closeConnection() {
@@ -178,11 +184,11 @@ public class ServicesRpcProxy implements IServices {
 
 
     private void handleUpdate(Response response) {
-        if (response.type() == ResponseType.GET_FLIGHTS) {
-            List<Flight> flights = (List<Flight>) response.data();
+        if (response.type() == ResponseType.FLIGHTS_CHANGED) {
+            Flight flight = (Flight) response.data();
             System.out.println("Flights update");
             try {
-                client.flightsChanged(flights);
+                client.flightsChanged(flight);
             } catch (ProjectException e) {
                 e.printStackTrace();
             }
@@ -190,7 +196,7 @@ public class ServicesRpcProxy implements IServices {
     }
 
     private boolean isUpdate(Response response) {
-        return response.type() == ResponseType.GET_FLIGHTS;
+        return response.type() == ResponseType.FLIGHTS_CHANGED;
     }
 
     private class ReaderThread implements Runnable {
