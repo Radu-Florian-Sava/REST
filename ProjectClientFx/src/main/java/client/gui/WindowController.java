@@ -210,26 +210,17 @@ public class WindowController implements Initializable, IObserver {
         Integer numberOfSeats = noSeatsSpinner.getValue();
         List<String> touristNames = new ArrayList<>(touristNamesList.getItems());
         if (numberOfSeats != touristNames.size()) {
-            Alert incorrectNumberOfSeats = new Alert(Alert.AlertType.ERROR);
-            incorrectNumberOfSeats.setTitle("Numarul de turisti");
-            incorrectNumberOfSeats.setContentText("Numarul de turisti nu se potriveste cu numarul din lista numelor");
-            incorrectNumberOfSeats.show();
+            Util.showWarning("Numarul de turisti", "Numarul de turisti nu se potriveste cu numarul din lista numelor");
             return;
         }
         String clientName = clientComboBox.getValue();
         if (clientName == null) {
-            Alert noClient = new Alert(Alert.AlertType.ERROR);
-            noClient.setTitle("Numele Clientului");
-            noClient.setContentText("Clientul nu este selectat");
-            noClient.show();
+            Util.showWarning("Numele Clientului","Clientul nu este selectat" );
             return;
         }
         Flight flight = searchTable.getSelectionModel().getSelectedItem();
         if (flight == null) {
-            Alert noFlight = new Alert(Alert.AlertType.ERROR);
-            noFlight.setTitle("Zborul");
-            noFlight.setContentText("Zborul nu este selectat");
-            noFlight.show();
+            Util.showWarning("Zborul", "Zborul nu este selectat");
             return;
         }
         searchTable.getItems().clear();
@@ -238,10 +229,7 @@ public class WindowController implements Initializable, IObserver {
         } catch (ProjectException e) {
             e.printStackTrace();
         }
-        Alert noFlight = new Alert(Alert.AlertType.INFORMATION);
-        noFlight.setTitle("Succes!");
-        noFlight.setContentText("Rezervarea pentru client a fost facuta cu succes");
-        noFlight.show();
+        Util.showWarning("Succes!", "Rezervarea pentru client a fost facuta cu succes");
     }
 
     public void addToSearchedFlights(MouseEvent mouseEvent){

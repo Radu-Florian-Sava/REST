@@ -7,7 +7,6 @@ import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
@@ -16,12 +15,11 @@ import services.IServices;
 import services.ProjectException;
 
 public class LoginController {
-
+    Parent mainWindowParent;
     @FXML
     TextField usernameTextField;
     @FXML
     TextField passwordTextField;
-    Parent mainWindowParent;
     private IServices server;
     private WindowController windowCtrl;
     private Admin crtUser;
@@ -36,15 +34,15 @@ public class LoginController {
     }
 
     public void loginUser(ActionEvent actionEvent) {
-        String nume = usernameTextField.getText();
-        String passwd = passwordTextField.getText();
-        crtUser = new Admin(0, nume, passwd);
+        String username = usernameTextField.getText();
+        String password = passwordTextField.getText();
+        crtUser = new Admin(0, username, password);
 
 
         try {
             server.login(crtUser, windowCtrl);
             Stage stage = new Stage();
-            stage.setTitle("Window for " + crtUser.getUsername());
+            stage.setTitle("Autentificat ca si " + crtUser.getUsername());
             stage.setScene(new Scene(mainWindowParent));
 
             stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
@@ -62,11 +60,7 @@ public class LoginController {
             ((Node) (actionEvent.getSource())).getScene().getWindow().hide();
 
         } catch (ProjectException e) {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("MPP");
-            alert.setHeaderText("Authentication failure");
-            alert.setContentText("Wrong username or password");
-            alert.showAndWait();
+            Util.showWarning("Problema de autentificare", "Verificati numele de utilizator si parola");
         }
 
 

@@ -50,19 +50,19 @@ public class StartRpcClientFX extends Application {
         ctrl.setServer(server);
         loader.setController(ctrl);
 
-        FXMLLoader cloader = new FXMLLoader(
+        FXMLLoader mainLoader = new FXMLLoader(
                 getClass().getClassLoader().getResource("mainWindow.fxml"));
         WindowController windowCtrl = new WindowController();
         windowCtrl.setServer(server);
         ctrl.setWindowController(windowCtrl);
-        cloader.setController(windowCtrl);
+        mainLoader.setController(windowCtrl);
 
-        Parent croot = cloader.load();
-        ctrl.setParent(croot);
+        Parent mainRoot = mainLoader.load();
+        ctrl.setParent(mainRoot);
 
         Scene scene = new Scene(loader.load());
 
-        primaryStage.setTitle("MPP");
+        primaryStage.setTitle("Aplicatie aeroport");
         primaryStage.setScene(scene);
         primaryStage.show();
 
