@@ -56,7 +56,7 @@ public class ServicesImpl implements IServices {
         List<Flight> flights=flightRepo.getAllAvailable();
         if(flights == null)
             throw new ProjectException("No flights available");
-        System.out.println("Avaliable flights: " + flights.size());
+        System.out.println("Available flights: " + flights.size());
         return flights;
     }
 
@@ -65,7 +65,7 @@ public class ServicesImpl implements IServices {
         List<Flight> flights=flightRepo.searchByDateAndDestination(destination, date);
         if(flights == null)
             throw new ProjectException("No flights found");
-        System.out.println("Avaliable flights: " + flights.size());
+        System.out.println("Available flights: " + flights.size());
         return flights;
     }
 
@@ -94,6 +94,7 @@ public class ServicesImpl implements IServices {
         Client client = clientRepo.findByName(clientName);
         Reservation reservation = new Reservation(flight,client, clientNames, numberOfSeats);
         reservationRepo.add(reservation);
+        flight = flightRepo.findById(flight.getID());
         for(IObserver admin: loggedAdmins.values()){
                 admin.flightsChanged(flight);
         }

@@ -111,6 +111,10 @@ public class WindowController implements Initializable, IObserver {
             }
             flightTable.getItems().remove(flight);
             searchTable.getItems().remove(flight);
+            if(flight.getNumberOfTickets() > 0){
+                flightTable.getItems().add(flight);
+                flightTable.refresh();
+            }
         });
     }
 
@@ -130,7 +134,7 @@ public class WindowController implements Initializable, IObserver {
 
     public void setUser(Admin admin) {
         this.admin = admin;
-
+        System.out.println("Logged in as "+ admin.getUsername());
     }
 
     public void findFlights(ActionEvent actionEvent) {
