@@ -146,6 +146,9 @@ public class WindowController implements Initializable, IObserver {
         } catch (ProjectException e) {
             e.printStackTrace();
         }
+        for(Flight x: searchTable.getItems()){
+            flightTable.getItems().add(x);
+        }
         searchTable.getItems().clear();
         for(Flight x: flights){
             searchTable.getItems().add(x);

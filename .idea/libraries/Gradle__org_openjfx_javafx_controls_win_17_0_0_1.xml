@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.openjfx:javafx-controls:win:17.0.0.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-controls/17.0.0.1/9d9af25816b58bb5e3f43f4693c2298f39789e7c/javafx-controls-17.0.0.1-win.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-controls/17.0.0.1/6cc78ff31836157e37d444eac737b09a09910fa2/javafx-controls-17.0.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

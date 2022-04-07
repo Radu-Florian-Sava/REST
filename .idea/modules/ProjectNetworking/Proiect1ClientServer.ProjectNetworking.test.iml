@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":ProjectNetworking:test" external.linked.project.path="$MODULE_DIR$/../../../ProjectNetworking" external.root.project.path="$MODULE_DIR$/../../../ProjectClientFx" external.system.id="GRADLE" external.system.module.group="Proiect1ClientServer" external.system.module.type="sourceSet" external.system.module.version="1.0" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <output-test url="file://$MODULE_DIR$/../../../ProjectNetworking/build/classes/java/test" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../ProjectNetworking/src/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../../ProjectNetworking/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../ProjectNetworking/src/test/resources" type="java-test-resource" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="Proiect1ClientServer.ProjectNetworking.main" />
+    <orderEntry type="module" module-name="Proiect1ClientServer.ProjectModel.main" />
+    <orderEntry type="module" module-name="Proiect1ClientServer.ProjectServices.main" />
+    <orderEntry type="library" name="Gradle: org.junit.jupiter:junit-jupiter-api:5.7.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.junit.platform:junit-platform-commons:1.7.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.apiguardian:apiguardian-api:1.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.opentest4j:opentest4j:1.2.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.junit.jupiter:junit-jupiter-engine:5.7.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.openjfx:javafx-controls:win:17-ea+11" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.openjfx:javafx-graphics:17-ea+11" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.openjfx:javafx-graphics:win:17-ea+11" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.openjfx:javafx-base:17-ea+11" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.openjfx:javafx-base:win:17-ea+11" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.junit.platform:junit-platform-engine:1.7.0" level="project" />
+  </component>
+  <component name="TestModuleProperties" production-module="Proiect1ClientServer.ProjectNetworking.main" />
+</module>

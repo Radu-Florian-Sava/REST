@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":ProjectClientFx:main" external.linked.project.path="$MODULE_DIR$/../../../ProjectClientFx" external.root.project.path="$MODULE_DIR$/../../../ProjectClientFx" external.system.id="GRADLE" external.system.module.group="Proiect1ClientServer" external.system.module.type="sourceSet" external.system.module.version="1.0" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/../../../ProjectClientFx/build/classes/java/main" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../ProjectClientFx/src/main">
+      <sourceFolder url="file://$MODULE_DIR$/../../../ProjectClientFx/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../ProjectClientFx/src/main/resources" type="java-resource" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-fxml:win:17.0.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-controls:17.0.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-controls:win:17.0.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-graphics:17.0.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-graphics:win:17.0.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-base:17.0.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-base:win:17.0.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.controlsfx:controlsfx:11.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.dlsc.formsfx:formsfx-core:11.3.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0" level="project" />
+    <orderEntry type="module" module-name="Proiect1ClientServer.ProjectModel.main" />
+    <orderEntry type="module" module-name="Proiect1ClientServer.ProjectServices.main" />
+    <orderEntry type="module" module-name="Proiect1ClientServer.ProjectNetworking.main" />
+    <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-core:2.10.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-api:2.10.0" level="project" />
+  </component>
+</module>

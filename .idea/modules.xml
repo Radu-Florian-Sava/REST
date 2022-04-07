@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Proiect1ClientServer.iml" filepath="$PROJECT_DIR$/.idea/Proiect1ClientServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectClientFx/Proiect1ClientServer.ProjectClientFx.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectClientFx/Proiect1ClientServer.ProjectClientFx.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectClientFx/Proiect1ClientServer.ProjectClientFx.test.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectClientFx/Proiect1ClientServer.ProjectClientFx.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectModel/Proiect1ClientServer.ProjectModel.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectModel/Proiect1ClientServer.ProjectModel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectModel/Proiect1ClientServer.ProjectModel.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectModel/Proiect1ClientServer.ProjectModel.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectModel/Proiect1ClientServer.ProjectModel.test.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectModel/Proiect1ClientServer.ProjectModel.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectNetworking/Proiect1ClientServer.ProjectNetworking.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectNetworking/Proiect1ClientServer.ProjectNetworking.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectNetworking/Proiect1ClientServer.ProjectNetworking.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectNetworking/Proiect1ClientServer.ProjectNetworking.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectNetworking/Proiect1ClientServer.ProjectNetworking.test.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectNetworking/Proiect1ClientServer.ProjectNetworking.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectPersistence/Proiect1ClientServer.ProjectPersistence.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectPersistence/Proiect1ClientServer.ProjectPersistence.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectPersistence/Proiect1ClientServer.ProjectPersistence.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectPersistence/Proiect1ClientServer.ProjectPersistence.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectPersistence/Proiect1ClientServer.ProjectPersistence.test.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectPersistence/Proiect1ClientServer.ProjectPersistence.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectServer/Proiect1ClientServer.ProjectServer.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectServer/Proiect1ClientServer.ProjectServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectServer/Proiect1ClientServer.ProjectServer.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectServer/Proiect1ClientServer.ProjectServer.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectServer/Proiect1ClientServer.ProjectServer.test.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectServer/Proiect1ClientServer.ProjectServer.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectServices/Proiect1ClientServer.ProjectServices.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectServices/Proiect1ClientServer.ProjectServices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectServices/Proiect1ClientServer.ProjectServices.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectServices/Proiect1ClientServer.ProjectServices.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectServices/Proiect1ClientServer.ProjectServices.test.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectServices/Proiect1ClientServer.ProjectServices.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Proiect1ClientServer.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Proiect1ClientServer.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Proiect1ClientServer.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Proiect1ClientServer.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectClientFx/ProjectClientFx.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectClientFx/ProjectClientFx.iml" />
+    </modules>
+  </component>
+</project>
