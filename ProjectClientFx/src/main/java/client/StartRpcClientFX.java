@@ -7,7 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import network.rpc.ServicesRpcProxy;
+import protobuf.ProtoClientService;
 import services.IServices;
 
 import java.io.IOException;
@@ -42,7 +42,7 @@ public class StartRpcClientFX extends Application {
         System.out.println("Using server IP " + serverIP);
         System.out.println("Using server port " + serverPort);
 
-        IServices server = new ServicesRpcProxy(serverIP, serverPort);
+        IServices server = new ProtoClientService(serverIP, serverPort);
 
         FXMLLoader loader = new FXMLLoader(
                 getClass().getClassLoader().getResource("loginWindow.fxml"));

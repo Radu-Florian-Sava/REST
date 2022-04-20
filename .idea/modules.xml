@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Proiect1ClientServer.iml" filepath="$PROJECT_DIR$/.idea/Proiect1ClientServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectClientFx/Proiect1ClientServer.ProjectClientFx.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectClientFx/Proiect1ClientServer.ProjectClientFx.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectClientFx/Proiect1ClientServer.ProjectClientFx.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectClientFx/Proiect1ClientServer.ProjectClientFx.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectClientFx/Proiect1ClientServer.ProjectClientFx.test.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectClientFx/Proiect1ClientServer.ProjectClientFx.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectModel/Proiect1ClientServer.ProjectModel.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectModel/Proiect1ClientServer.ProjectModel.iml" />
@@ -11,6 +12,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectNetworking/Proiect1ClientServer.ProjectNetworking.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectNetworking/Proiect1ClientServer.ProjectNetworking.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectNetworking/Proiect1ClientServer.ProjectNetworking.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectNetworking/Proiect1ClientServer.ProjectNetworking.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectNetworking/Proiect1ClientServer.ProjectNetworking.test.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectNetworking/Proiect1ClientServer.ProjectNetworking.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectNetworkingCrossPlatform/Proiect1ClientServer.ProjectNetworkingCrossPlatform.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectNetworkingCrossPlatform/Proiect1ClientServer.ProjectNetworkingCrossPlatform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectNetworkingCrossPlatform/Proiect1ClientServer.ProjectNetworkingCrossPlatform.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectNetworkingCrossPlatform/Proiect1ClientServer.ProjectNetworkingCrossPlatform.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectNetworkingCrossPlatform/Proiect1ClientServer.ProjectNetworkingCrossPlatform.test.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectNetworkingCrossPlatform/Proiect1ClientServer.ProjectNetworkingCrossPlatform.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectPersistence/Proiect1ClientServer.ProjectPersistence.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectPersistence/Proiect1ClientServer.ProjectPersistence.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectPersistence/Proiect1ClientServer.ProjectPersistence.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectPersistence/Proiect1ClientServer.ProjectPersistence.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectPersistence/Proiect1ClientServer.ProjectPersistence.test.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectPersistence/Proiect1ClientServer.ProjectPersistence.test.iml" />

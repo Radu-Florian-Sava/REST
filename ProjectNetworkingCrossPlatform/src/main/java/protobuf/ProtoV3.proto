@@ -1,0 +1,51 @@
+syntax="proto3";
+package protobuf;
+
+message Admin {
+  int32 id=1;
+  string username=2;
+  string password=3;
+}
+
+message Client{
+  int32 id=1;
+  string name=2;
+  string address=3;
+}
+
+message Flight{
+  int32 id=1;
+  string destination=2;
+  string dateTime=3;
+  string airport=4;
+  int32 numberOfTickets=5;
+}
+
+message Reservation{
+  Flight flight=1;
+  Client client=2;
+  repeated string touristNames=3;
+  int32 numberOfSeats=4;
+}
+
+message Answer {
+  enum Type {Unknown=0; Error=1; OK=2; FlightsChanged=3;}
+  Type type = 1;
+  string error = 2;
+  Flight flight = 3;
+  repeated Flight flights =4;
+  repeated string clientNames=5;
+  Client client=6;
+}
+
+message Request {
+  enum Type {Unknown=0; Login=1; Logout=2; GetFlights=3; GetClientNames=4; GetClient=5; SearchFlights=6; BuyTicket=7;}
+  Type type = 1;
+  Admin admin=2;
+  string clientName=3;
+  string destination=4;
+  string date=5;
+  Flight flight=6;
+  int32 numberOfSeats=7;
+  repeated string clientNames=8;
+}

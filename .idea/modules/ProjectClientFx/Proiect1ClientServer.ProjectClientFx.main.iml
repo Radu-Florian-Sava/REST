@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id=":ProjectClientFx:main" external.linked.project.path="$MODULE_DIR$/../../../ProjectClientFx" external.root.project.path="$MODULE_DIR$/../../../ProjectClientFx" external.system.id="GRADLE" external.system.module.group="Proiect1ClientServer" external.system.module.type="sourceSet" external.system.module.version="1.0" type="JAVA_MODULE" version="4">
+<module external.linked.project.id=":ProjectClientFx:main" external.linked.project.path="$MODULE_DIR$/../../../ProjectClientFx" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="Proiect1ClientServer" external.system.module.type="sourceSet" external.system.module.version="1.0" type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager">
     <output url="file://$MODULE_DIR$/../../../ProjectClientFx/build/classes/java/main" />
     <exclude-output />
@@ -22,7 +22,9 @@
     <orderEntry type="module" module-name="Proiect1ClientServer.ProjectModel.main" />
     <orderEntry type="module" module-name="Proiect1ClientServer.ProjectServices.main" />
     <orderEntry type="module" module-name="Proiect1ClientServer.ProjectNetworking.main" />
+    <orderEntry type="module" module-name="Proiect1ClientServer.ProjectNetworkingCrossPlatform.main" />
     <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-core:2.10.0" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-api:2.10.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.google.protobuf:protobuf-java:3.20.0" level="project" />
   </component>
 </module>

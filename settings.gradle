@@ -5,4 +5,5 @@ include 'ProjectPersistence'
 include 'ProjectNetworking'
 include 'ProjectServer'
 include 'ProjectClientFx'
+include 'ProjectNetworkingCrossPlatform'
 

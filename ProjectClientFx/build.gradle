@@ -36,6 +36,7 @@ dependencies {
     implementation project (':ProjectModel')
     implementation project (':ProjectServices')
     implementation project (':ProjectNetworking')
+    implementation project (':ProjectNetworkingCrossPlatform')
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
     implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.10.0'
