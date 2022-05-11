@@ -1,6 +1,7 @@
 package repository;
 
 import model.Flight;
+import org.springframework.stereotype.Component;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -13,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+@Component
 public class FlightRepo extends IFlightRepo {
 
     public FlightRepo(Properties properties) {

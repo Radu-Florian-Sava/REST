@@ -67,7 +67,7 @@ goto fail
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\ProjectClientFx-1.0.jar;%APP_HOME%\lib\javafx-fxml-17.0.0.1-win.jar;%APP_HOME%\lib\ProjectNetworking-1.0.jar;%APP_HOME%\lib\ProjectServices-1.0.jar;%APP_HOME%\lib\ProjectModel-1.0.jar;%APP_HOME%\lib\javafx-controls-17.0.0.1-win.jar;%APP_HOME%\lib\javafx-controls-17.0.0.1.jar;%APP_HOME%\lib\javafx-graphics-17.0.0.1-win.jar;%APP_HOME%\lib\javafx-graphics-17.0.0.1.jar;%APP_HOME%\lib\javafx-base-17.0.0.1-win.jar;%APP_HOME%\lib\javafx-base-17.0.0.1.jar;%APP_HOME%\lib\controlsfx-11.1.0.jar;%APP_HOME%\lib\formsfx-core-11.3.2.jar;%APP_HOME%\lib\bootstrapfx-core-0.4.0.jar;%APP_HOME%\lib\log4j-core-2.10.0.jar;%APP_HOME%\lib\log4j-api-2.10.0.jar
+set CLASSPATH=%APP_HOME%\lib\ProjectClientFx-1.0.jar;%APP_HOME%\lib\javafx-fxml-17.0.0.1-win.jar;%APP_HOME%\lib\ProjectNetworking-1.0.jar;%APP_HOME%\lib\ProjectNetworkingCrossPlatform-1.0.jar;%APP_HOME%\lib\ProjectServices-1.0.jar;%APP_HOME%\lib\ProjectModel-1.0.jar;%APP_HOME%\lib\javafx-controls-17.0.0.1-win.jar;%APP_HOME%\lib\javafx-controls-17.0.0.1.jar;%APP_HOME%\lib\javafx-graphics-17.0.0.1-win.jar;%APP_HOME%\lib\javafx-graphics-17.0.0.1.jar;%APP_HOME%\lib\javafx-base-17.0.0.1-win.jar;%APP_HOME%\lib\javafx-base-17.0.0.1.jar;%APP_HOME%\lib\controlsfx-11.1.0.jar;%APP_HOME%\lib\formsfx-core-11.3.2.jar;%APP_HOME%\lib\bootstrapfx-core-0.4.0.jar;%APP_HOME%\lib\log4j-core-2.10.0.jar;%APP_HOME%\lib\log4j-api-2.10.0.jar;%APP_HOME%\lib\protobuf-java-3.20.0.jar
 
 
 @rem Execute ProjectClientFx

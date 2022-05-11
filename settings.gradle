@@ -6,4 +6,5 @@ include 'ProjectNetworking'
 include 'ProjectServer'
 include 'ProjectClientFx'
 include 'ProjectNetworkingCrossPlatform'
+include 'RestServices'
 

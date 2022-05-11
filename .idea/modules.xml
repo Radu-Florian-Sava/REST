@@ -24,6 +24,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectServices/Proiect1ClientServer.ProjectServices.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectServices/Proiect1ClientServer.ProjectServices.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectServices/Proiect1ClientServer.ProjectServices.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectServices/Proiect1ClientServer.ProjectServices.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectServices/Proiect1ClientServer.ProjectServices.test.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectServices/Proiect1ClientServer.ProjectServices.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RestServices/Proiect1ClientServer.RestServices.iml" filepath="$PROJECT_DIR$/.idea/modules/RestServices/Proiect1ClientServer.RestServices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RestServices/Proiect1ClientServer.RestServices.main.iml" filepath="$PROJECT_DIR$/.idea/modules/RestServices/Proiect1ClientServer.RestServices.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RestServices/Proiect1ClientServer.RestServices.test.iml" filepath="$PROJECT_DIR$/.idea/modules/RestServices/Proiect1ClientServer.RestServices.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Proiect1ClientServer.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Proiect1ClientServer.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Proiect1ClientServer.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Proiect1ClientServer.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProjectClientFx/ProjectClientFx.iml" filepath="$PROJECT_DIR$/.idea/modules/ProjectClientFx/ProjectClientFx.iml" />

@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/ProjectPersistence" />
             <option value="$PROJECT_DIR$/ProjectServer" />
             <option value="$PROJECT_DIR$/ProjectServices" />
+            <option value="$PROJECT_DIR$/RestServices" />
           </set>
         </option>
       </GradleProjectSettings>
@@ -34,6 +35,7 @@
             <option value="$PROJECT_DIR$/ProjectPersistence" />
             <option value="$PROJECT_DIR$/ProjectServer" />
             <option value="$PROJECT_DIR$/ProjectServices" />
+            <option value="$PROJECT_DIR$/RestServices" />
           </set>
         </option>
       </GradleProjectSettings>
