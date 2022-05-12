@@ -43,10 +43,10 @@ public class FlightController {
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public Flight update(@RequestBody Flight flight) {
+    public Flight update(@PathVariable Integer id,@RequestBody Flight flight) {
         System.out.println("Updating flight ...");
-        flightRepo.update(flight, flight.getID());
-        return flight;
+        Flight updated = flightRepo.update(flight, id);
+        return updated;
     }
 
     // @CrossOrigin(origins = "http://localhost:3000")

@@ -63,8 +63,9 @@ public class IFlightRepo implements Repository<Flight, Integer>{
     }
 
     @Override
-    public void update(Flight elem, Integer id) {
+    public Flight update(Flight elem, Integer id) {
         logger.traceEntry();
+        Flight updated=null;
         Connection con = dbUtils.getConnection();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss");
         try {
@@ -75,14 +76,15 @@ public class IFlightRepo implements Repository<Flight, Integer>{
             statement.setString(3,elem.getAirport());
             statement.setInt(4, elem.getNumberOfTickets());
             statement.setInt(5, id);
-            Flight updated = findById(id);
             int result = statement.executeUpdate();
+            updated = findById(id);
             logger.trace("Updated {} instances",result);
         }
         catch (Exception ex) {
             logger.error(ex);
         }
         logger.traceExit();
+        return updated;
     }
 
     @Override

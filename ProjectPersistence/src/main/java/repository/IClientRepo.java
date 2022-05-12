@@ -55,8 +55,9 @@ public class IClientRepo implements Repository<Client, Integer> {
     }
 
     @Override
-    public void update(Client elem, Integer id) {
+    public Client update(Client elem, Integer id) {
         logger.traceEntry();
+        Client updated=null;
         Connection con = dbUtils.getConnection();
         try {
             PreparedStatement statement = con.prepareStatement
@@ -64,13 +65,14 @@ public class IClientRepo implements Repository<Client, Integer> {
             statement.setString(1, elem.getName());
             statement.setString(2, elem.getAddress());
             statement.setInt(3, id);
-            Client updated = findById(id);
             int result = statement.executeUpdate();
+            updated = findById(id);
             logger.trace("Updated {} instances", result);
         } catch (Exception ex) {
             logger.error(ex);
         }
         logger.traceExit();
+        return updated;
     }
 
     @Override

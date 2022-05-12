@@ -92,7 +92,8 @@ public class IReservationRepo implements Repository<Reservation, Pair<Flight, Cl
     }
 
     @Override
-    public void update(Reservation elem, Pair<Flight, Client> id) {
+    public Reservation update(Reservation elem, Pair<Flight, Client> id) {
+        return null;
     }
 
     @Override

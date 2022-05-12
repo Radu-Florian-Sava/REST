@@ -58,7 +58,8 @@ public class IAdminRepo implements Repository<Admin, Integer> {
     }
 
     @Override
-    public void update(Admin elem, Integer id) {
+    public Admin update(Admin elem, Integer id) {
+        return null;
     }
 
     @Override
