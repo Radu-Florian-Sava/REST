@@ -14,19 +14,19 @@ public class StartRestClient {
         Flight flightT=new Flight(9999, "Wakanda", LocalDateTime.now(), "WAK Flights", 10);
         //{"destination":"San Floresti","airport":"Valgrind","numberOfTickets":17,"time":"19:36:38","id":70,"date":"2022-03-15"}
         try{
-
-            show(()-> System.out.println(flightsClient.create(flightT)));
+            Flight finalFlightT = flightsClient.create(flightT);
+            show(()-> System.out.println(finalFlightT));
             show(()->{
                 Flight[] res=flightsClient.getAll();
                 for(Flight flight:res){
                     System.out.println(flight.getID()+ ": "+flight.getDestination()+ " , " + flight.getAirport());
                 }
             });
+            show(()->flightsClient.delete(finalFlightT.getID().toString()));
         }catch(RestClientException ex){
             System.out.println("Exception ... "+ex.getMessage());
         }
 
-        show(()-> System.out.println(flightsClient.getById("9999")));
     }
 
 
